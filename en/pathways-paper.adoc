@@ -1,5 +1,6 @@
 = Open Science Platform for Disaster Risk Reduction
 Joost van_Ulden <joost.vanulden@canada.ca>; William Chow <william.chow@canada.ca>; Drew Rotheram-Clarke <drew.rotheram-clarke@canada.ca>; Damon Ulmi <damon.ulmi@canada.ca>; Anthony Fok <anthony.fok@canada.ca>
+:pdf-page-size: LETTER
 :reproducible:
 :sectanchors:
 :toc: left
