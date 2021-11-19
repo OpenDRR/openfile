@@ -2,27 +2,27 @@
 
 To support the Pathways activities and deliverables a platform with the following features and functions were desired:
 
--	Collaborative development of science assets and related documentation
--	Centralized access to the science outputs
--	Data and related services to align with industry best practices and standards
+*	Collaborative development of science assets and related documentation
+*	Centralized access to the science outputs
+*	Data and related services to align with industry best practices and standards
 
 The operational context of the platform required that it was to be aligned with Government of Canada policies, directives, and standards. These included:
 
--	Government of Canada Policy on Service and Digital:
-  - Government of Canada Directive on Service and Digital
-    - Mandatory Procedures on Application Programming Interfaces
-  - Government of Canada Standard on Web Accessibility
-  - Government of Canada Standard on Web Interoperability
-  - Government of Canada Standard on Web Usability
--	NRCan Open Science Initiative
--	NRCan Scientific Integrity Policy
+*	Government of Canada Policy on Service and Digital:
+** Government of Canada Directive on Service and Digital
+*** Mandatory Procedures on Application Programming Interfaces
+** Government of Canada Standard on Web Accessibility
+** Government of Canada Standard on Web Interoperability
+** Government of Canada Standard on Web Usability
+*	NRCan Open Science Initiative
+*	NRCan Scientific Integrity Policy
 
 === Principles
 
 The principles under which the platform would operate were established as:
 
--	Transparent
--	Open
--	Collaborative
--	Accessible
--	Robust
+*	Transparent
+*	Open
+*	Collaborative
+*	Accessible
+*	Robust
