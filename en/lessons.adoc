@@ -1,6 +1,30 @@
 == Lessons Learned
+// draft: very early brainstorming; by no means complete
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+=== Open Source, Open Data, Open Science, Open Process
+
+* (May seem scary at first?) but many benefits
+* full openness, transparency, accountability
+* GitHub platform offers a lot of features and flexibility that we need
+* Industry best practices
+
+* Mutually beneficial relationship with GEM (OpenQuake)
+* pygeoapi
+* etc.
+
+=== Security
+
+Example: Apache Log4j vulnerability
+
+* We got confirmation from ITSEC that our ES endpoint was attacked. Since we were running 7.12.0 the attack failed.  Lesson: keep your software up to date.  (Credit: Joost,)
+** https://xeraa.net/blog/2021_mitigate-log4j2-log4shell-elasticsearch/[Mitigate Log4j2 / Log4Shell in Elasticsearch]
+
+* (a little bit about) keeping up-to-date vs. compatibility-breaking changes (e.g. Python 3.8 to 3.9); be prepared for extra work hours (manpower?) to resolve compatibility issues during upgrade...
+
+=== [optional] The use of Agile principles on GitHub; benefits and challenges
+
+=== [optional] opendrr.github.io got falsely flagged as phishing or malicious
+
+* CIRA, Google, VirusTotal; took a while to get off e.g. Microsoft SmartScreen
+* Possibly due to the use of non Canada.ca template on a non .ca domain?
+* https://github.com/OpenDRR/opendrr/issues/122

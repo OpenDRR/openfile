@@ -1,6 +1,28 @@
 == Future Development
+// draft: very early brainstorming; by no means complete
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+=== Risk Profiler (v1)
+
+* Expected to be published before April 2022 (kudos to https://habitatseven.com/[HabitatSeven])
+
+=== Increase in scope: Import and process other datasets besides earthquake
+
+* Flood: https://github.com/NRCan/CanFlood (Open-source flood risk modelling toolbox)
+* Wildfire
+* Mudslides
+
+=== Continued automation, optimization, etc.
+
+* Increased use of GitHub Actions workflows
+* Full CI (Continuous Integration, Continuous Delivery)
+* Cost-savings (e.g. move off Git LFS wherever possible; cheaper alternatives...)
+* More automated testing, to catch errors as early as possible (preferrably at the pull request stage)
+* Test-driven development (TDD) / Bahaviour driven development (BDD)?
+
+=== Promote the project
+
+* as a model with example that that other groups (countries/governments/companies etc.) can use
+* (as open-source project) invite participation from open-source, scientific community, and the general public
+* through web site(s), seminars/talks, publications
+
+=== More...
