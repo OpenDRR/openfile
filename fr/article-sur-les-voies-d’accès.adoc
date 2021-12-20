@@ -1,0 +1,21 @@
+= Plate-forme scientifique ouverte pour la réduction des risques de catastrophes
+Joost van_Ulden <joost.vanulden@canada.ca>; William Chow <william.chow@canada.ca>; Drew Rotheram-Clarke <drew.rotheram-clarke@canada.ca>; Damon Ulmi <damon.ulmi@canada.ca>; Anthony Fok <anthony.fok@canada.ca>
+:pdf-page-size: LETTER
+:reproducible:
+:sectanchors:
+:toc: left
+include::locale/attributes-fr.adoc[]
+
+include::sommaire.adoc[]
+
+:sectnums:
+
+include::introduction.adoc[]
+
+include::exigences.adoc[]
+
+include::architecture.adoc[]
+
+include::leçons.adoc[]
+
+include::futur.adoc[]

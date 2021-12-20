@@ -1,0 +1,35 @@
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  asciidoctor:
+    name: Build AsciiDoc documents
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install asciidoctor and asciidoctor-pdf
+        run: |
+          sudo apt update
+          sudo apt install asciidoctor ruby-asciidoctor-pdf
+
+      - name: Build with asciidoctor and asciidoctor-pdf
+        run: |
+          asciidoctor -D public/en en/pathways-paper.adoc
+          asciidoctor -D public/fr fr/article-sur-les-voies-d’accès.adoc
+          asciidoctor-pdf -D public/en en/pathways-paper.adoc
+          asciidoctor-pdf -D public/fr fr/article-sur-les-voies-d’accès.adoc
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
