@@ -8,6 +8,8 @@ include::locale/attributes-fr.adoc[]
 
 include::sommaire.adoc[]
 
+:sectnums:
+
 include::introduction.adoc[]
 
 include::exigences.adoc[]
