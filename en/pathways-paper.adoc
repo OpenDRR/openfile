@@ -3,10 +3,11 @@ Joost van_Ulden <joost.vanulden@canada.ca>; William Chow <william.chow@canada.ca
 :pdf-page-size: LETTER
 :reproducible:
 :sectanchors:
-:sectnums:
 :toc: left
 
 include::summary.adoc[]
+
+:sectnums:
 
 include::introduction.adoc[]
 
