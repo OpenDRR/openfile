@@ -17,10 +17,10 @@ The dashboard environment is provided by link:https://dashboard.riskprofiler.ca[
 
 [#image-kibana]
 .OpenDRR Kibana
-image::img/opendrr-kibana.png[OpenDRR Kibana, 400]
+image::img/opendrr-kibana.png[OpenDRR Kibana, 300]
 
 The purpose built application, called link:https://riskprofiler.ca[RiskProfiler], is a custom web application that connects to a variety of services including the Elasticsearch document store. Build to be highly scalable and user friendly, it seeks to communicate the key messages relating to natural hazard (i.e.: earthquake) risk. It provides for some basic filtering and visualization in an area of interest, such as a community or region.
 
 [#image-riskprofiler]
 .OpenDRR RiskProfiler
-image::img/opendrr-riskprofiler.png[OpenDRR RiskProfiler, 400]
+image::img/opendrr-riskprofiler.png[OpenDRR RiskProfiler, 300]
