@@ -1,12 +1,3 @@
 == Introduction
 
-Github was chosen as the platform to support the development of the science outputs and related software, documentation, and tools. While well known in the software development community it is somewhat less known in the science community. However, the core concepts behind Github (e.g.: versioning, repositories, etc.) were more or less understood by key 
-contributers.
-
-Built in features of Github such as continuous integration and deployment, community building, websites, and secure workspaces were seen as ways toward achieving an open and collaborative approach to science, one that seeks to build concensus and drive engagement throughout it's lifecycle.
-
-Due to the diversity of use cases and user profiles for the information products (e.g.: maps, visualizations) it was clear that a single solution would not be sufficient. It was determined that a purpose built web application in addition to a customizable dashboard environment would likely meet the needs of all users.
-
-The dashboard environment is provided by link:https://dashboard.riskprofiler.ca[Kibana] which connects to an Elasticsearch document store. This environment is highly customizable and allows individuals and organizations to create public or private spaces where they can query and vizualize all available data.
-
-The purpose built application, called link:https://riskprofiler.ca[RiskProfiler], is a custom web application that connects to a variety of services including the Elasticsearch document store. Build to be highly scalable and user friendly, it seeks to communicate the key messages relating to natural hazard (i.e.: earthquake) risk. It provides for some basic filtering and visualization in an area of interest, such as a community or region.
+A brief introduction to Pathways and the role of the platform in delivering the science outputs. Emphasis on evloving nature of the platform.

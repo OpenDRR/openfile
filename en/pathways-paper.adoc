@@ -13,6 +13,8 @@ include::introduction.adoc[]
 
 include::requirements.adoc[]
 
+include::overview.adoc[]
+
 include::architecture.adoc[]
 
 include::lessons.adoc[]
