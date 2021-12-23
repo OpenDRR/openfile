@@ -1,10 +1,11 @@
 == Platform Requirements
 
-To support the Pathways activities a platform with the following features and attributes was required:
+[.text-justify]
+To support the Pathways activities and deliverables a platform with the following features and functions was desired:
 
--	Supports open and collaborative development of science outputs
--	Centralizes access to the science outputs
--	Provides tools and applications to engage the public and support decision making
+-	Support open and collaborative development of science outputs
+-	Centralize access to the science outputs
+-	Provide tools and applications to engage the public and support decision making
 
 [.right]
 .R5 Principles
@@ -17,7 +18,8 @@ To support the Pathways activities a platform with the following features and at
 ****
 
 [.left]
-The generation of science outputs is becoming increasingly reliant on software code to automate processing, quality control, and publishing. Considerable attention was paid to alignment with best practices for Open Science (i.e., FAIR Principles) and scientific software code (i.e., R5 Principles).
+[.text-justify]
+The generation of science outputs is becoming increasingly reliant on software code to automate processing, quality control, and publishing. Considerable attention was paid to alignment with best practices for Open Science (e.g.: FAIR principles) and scientific software code (e.g.: R5 principles).
 
 [.right]
 .FAIR Principles
@@ -28,8 +30,11 @@ The generation of science outputs is becoming increasingly reliant on software c
 - Reusable
 ****
 
+[.text-justify]
 The scale and scope of the data involved in the project necessitated an approach that not only streamlined the production of science-based outputs, but also provided for a high degree of collaboration across many disciplines (e.g., policy, technology, and science) and stakeholders (e.g., provincial, municipal).
 
+[.text-justify]
 Decision support requirements were well understood at the outset. A comprehensive set of requirements for a multitude of stakeholders was developed footnote:[https://opendrr.github.io/documentation/docs/opendrr-platform.html]. The diversity of the stakeholders and their specific needs necessitated a multi-channel approach since a single application was deemed to be insufficient to serve all use cases effectively.
 
-With development led out of the Government of Canada the platform had to comply with requirements for publishing science outputs including standardized metadata, open data, support for both official languages, accessibility, and compliance with scientific integrity and publication policies. The scientific integrity and publishing requirements were particularly problematic as they traditionally pushed the development of the science behind closed doors. To comply with policy while supporting the objectives of the project, a balanced approach that prioritizes openness and transparency is needed.
+[.text-justify]
+With development being led out of the Government of Canada the platform had to comply with requirements for publishing science outputs including standardized metadata, open data, support for both official languages, accessibility, and compliance with scientific integrity and publication policies. The scientific integrity and publishing requirements were particularly problematic as they traditionally pushed the development of science behind closed doors, as such a novel and balanced approach would need to be taken to support the requirements of Pathways project.
