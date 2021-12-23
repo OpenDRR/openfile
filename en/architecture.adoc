@@ -21,13 +21,13 @@ These results are aggregated at several different spatial scales, building, saui
 
 === Data Dissemination
 
-==== API's
+==== API Stack
 
 [#image-apis]
 .OpenDRR API Stack
 image::img/opendrr-apis.png[OpenDRR API Stack, 400]
 
-==== Applications
+==== Application Stack
 
 [#image-apps]
 .OpenDRR Application Stack
