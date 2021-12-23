@@ -4,6 +4,7 @@ Joost van_Ulden <joost.vanulden@canada.ca>; William Chow <william.chow@canada.ca
 :reproducible:
 :sectanchors:
 :toc: left
+:imagesdir: img
 
 include::summary.adoc[]
 
