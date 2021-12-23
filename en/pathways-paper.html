@@ -492,6 +492,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>This is the abstract.</p>
 </div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column 1</th>
+<th class="tableblock halign-left valign-top">Column 2</th>
+<th class="tableblock halign-left valign-top">Column 3</th>
+<th class="tableblock halign-left valign-top">Column 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">This column&#8217;s content and borders are rendered using the table header (<code>h</code>) styles.</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>This column&#8217;s content is rendered using a monospace font (m).</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>This column&#8217;s content is bold (<code>s</code>).</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>This column&#8217;s content is italicized (<code>e</code>).</em></p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">This column&#8217;s content and borders are rendered using the table header (<code>h</code>) styles.</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>This column&#8217;s content is rendered using a monospace font (m).</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>This column&#8217;s content is bold (<code>s</code>).</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>This column&#8217;s content is italicized (<code>e</code>).</em></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect1">
@@ -505,7 +535,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect1">
 <h2 id="_platform_requirements"><a class="anchor" href="#_platform_requirements"></a>2. Platform Requirements</h2>
 <div class="sectionbody">
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>To support the Pathways activities and deliverables a platform with the following features and functions was desired:</p>
 </div>
 <div class="ulist">
@@ -545,7 +575,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="paragraph left text-justify">
+<div class="paragraph left">
 <p>The generation of science outputs is becoming increasingly reliant on software code to automate processing, quality control, and publishing. Considerable attention was paid to alignment with best practices for Open Science (e.g.: FAIR principles) and scientific software code (e.g.: R5 principles).</p>
 </div>
 <div class="sidebarblock right">
@@ -569,13 +599,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>The scale and scope of the data involved in the project necessitated an approach that not only streamlined the production of science-based outputs, but also provided for a high degree of collaboration across many disciplines (e.g., policy, technology, and science) and stakeholders (e.g., provincial, municipal).</p>
 </div>
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>Decision support requirements were well understood at the outset. A comprehensive set of requirements for a multitude of stakeholders was developed <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>. The diversity of the stakeholders and their specific needs necessitated a multi-channel approach since a single application was deemed to be insufficient to serve all use cases effectively.</p>
 </div>
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>With development being led out of the Government of Canada the platform had to comply with requirements for publishing science outputs including standardized metadata, open data, support for both official languages, accessibility, and compliance with scientific integrity and publication policies. The scientific integrity and publishing requirements were particularly problematic as they traditionally pushed the development of science behind closed doors, as such a novel and balanced approach would need to be taken to support the requirements of Pathways project.</p>
 </div>
 </div>
@@ -587,7 +617,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>GitHub was chosen as the platform to support the development of the science outputs and related software, documentation, and tools. While well known in the software development community it is lesser known in the science community. However, the core concepts behind GitHub (e.g.: versioning, repositories, etc.) were more or less understood by key
 contributers.</p>
 </div>
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>Where possible, runnable code is provided to ensure transparency in the science. For example, an interested party could make a copy of a repository and replicate a particular output (e.g.: dataset) or even the entirety of the OpenDRR infrastucture. The platform makes heavy use of containerization and infrastructure as code technologies for rapid deployment on personal computing devices or on the cloud.</p>
 </div>
 <div class="paragraph text-justify">
@@ -602,25 +632,25 @@ contributers.</p>
 <div class="paragraph text-justify">
 <p>Due to the diversity of use cases and user profiles for the information products (e.g.: maps, visualizations) it was clear that a single solution would not be sufficient. It was determined that a purpose built web application in addition to a customizable dashboard environment would likely meet the needs of all users.</p>
 </div>
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>The dashboard environment is provided by Kibana<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> which connects to an Elasticsearch document store. This environment is highly customizable and allows individuals and organizations to create public or private spaces where they can query and vizualize all available data in an intuitive way.</p>
 </div>
 <div id="image-kibana" class="imageblock">
 <div class="content">
-<img src="img/opendrr-kibana.png" alt="OpenDRR Kibana" width="300">
+<img src="img/img/opendrr-kibana.png" alt="OpenDRR Kibana" width="300">
 </div>
 <div class="title">Figure 2. OpenDRR Kibana</div>
 </div>
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>The purpose built application, called RiskProfiler<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>, is a custom web application that connects to a variety of services including the Elasticsearch document store. Built to be highly scalable and user friendly, it seeks to communicate the key messages relating to natural hazard risk. It provides for some basic filtering and visualization in an area of interest, such as a community or region.</p>
 </div>
 <div id="image-riskprofiler" class="imageblock">
 <div class="content">
-<img src="img/opendrr-riskprofiler.png" alt="OpenDRR RiskProfiler" width="300">
+<img src="img/img/opendrr-riskprofiler.png" alt="OpenDRR RiskProfiler" width="300">
 </div>
 <div class="title">Figure 3. OpenDRR RiskProfiler</div>
 </div>
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>In it&#8217;s initial release, RiskProfiler will focus primarily on earthquake risk but the intention is to include additional natural hazard risk assessemnts including flood, wildfire, landslides and tsunami.</p>
 </div>
 </div>
@@ -631,27 +661,27 @@ contributers.</p>
 <div class="paragraph">
 <p>Brief description of achitecture with goals/principles.</p>
 </div>
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>Source data for this project includes the National Human Settlement Layers (physical exposure and social vulnerability), the National Seismic Risk model for Canada (CanadaSRM2, probabilistic), Canada’s National Earthquake Scenario Catalogue (deterministic), and boundary geometries are stored in the Open Disaster Risk Reduction Platform (OpenDRR) organisation on GitHub.</p>
 </div>
 <div id="image-architecture" class="imageblock  text-center">
 <div class="content">
-<img src="img/opendrr-architecture.png" alt="OpenDRR Architecture Overview">
+<img src="img/img/opendrr-architecture.png" alt="OpenDRR Architecture Overview">
 </div>
 <div class="title">Figure 4. OpenDRR Architecture Overview</div>
 </div>
 <div class="sect2">
 <h3 id="_data_processing_pipeline"><a class="anchor" href="#_data_processing_pipeline"></a>4.1. Data Processing Pipeline</h3>
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>The OpenDRR platform data processing pipeline is responsible for extracting, transforming and loading (ETL) data. It consists of several open source technologies, namely PostgreSQL with PostGIS extension, Python, ElasticSearch/Kibana and PyGeoAPI. Each application is containerized using separate Docker containers which are orchestrated using Docker-Compose.</p>
 </div>
 <div id="image-etl" class="imageblock text-center">
 <div class="content">
-<img src="img/opendrr-etl.png" alt="OpenDRR Data Processing Pipeline" width="600">
+<img src="img/img/opendrr-etl.png" alt="OpenDRR Data Processing Pipeline" width="600">
 </div>
 <div class="title">Figure 5. OpenDRR Data Processing Pipeline</div>
 </div>
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>The stack of technologies can be configured to run on a local machine with PostgreSQL and ElasticSearch environments running locally or can be configured to communicate with cloud deployments of these services. For example, the stack can be configured to communicate simultaneously with a PostgreSQL database on Amazon Web Services (AWS) Relational Database Service (RDS) and a Containerized ElasticSearch environment on an AWS Elastic Container Service (ECS). A common use case is to run the ETL process on a local desktop or AWS Elastic Compute Cloud (EC2) with a local containerized PostgreSQL environment and a cloud deployed ElasticSearch environment which can support a public or private application programming interface (API).</p>
 </div>
 <div class="paragraph text-justify">
@@ -661,10 +691,10 @@ contributers.</p>
 <p>Discuss the postgresql database? Briefly?  Schemas?
 The PostgreSQL database is created and has PostGIS extension enabled to allow for spatial data queries.   The source datas are loaded into their respected schema names and the results are generated into their respected schemas with results_ prefix.????</p>
 </div>
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>Results are calculated and/or aggregated at different spatial scales dependent on the data.  For National Human Settlement Layers the results are in settled areas.  The probabilistic and deterministic data are calculated at the building level and aggregated up to the settled area and census subdivision levels.</p>
 </div>
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>These results are aggregated at several different spatial scales, building, sauid, and csd level. The building level is the finest spatial resolution and aggregates all buildings of simmilar construction type for a given neighborhood. The Sauid level of aggregation groups all building types across the whole neighbourhood polygon. The Census Sub-divison (CSD) aggregation is a coarse aggregation of all assets within a given CSD as defined by Statistics Canada.</p>
 </div>
 </div>
@@ -674,7 +704,7 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 <h4 id="_api_stack"><a class="anchor" href="#_api_stack"></a>4.2.1. API Stack</h4>
 <div id="image-apis" class="imageblock">
 <div class="content">
-<img src="img/opendrr-apis.png" alt="OpenDRR API Stack" width="400">
+<img src="img/img/opendrr-apis.png" alt="OpenDRR API Stack" width="400">
 </div>
 <div class="title">Figure 6. OpenDRR API Stack</div>
 </div>
@@ -683,7 +713,7 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 <h4 id="_application_stack"><a class="anchor" href="#_application_stack"></a>4.2.2. Application Stack</h4>
 <div id="image-apps" class="imageblock">
 <div class="content">
-<img src="img/opendrr-apps.png" alt="OpenDRR Application Stack" width="300">
+<img src="img/img/opendrr-apps.png" alt="OpenDRR Application Stack" width="300">
 </div>
 <div class="title">Figure 7. OpenDRR Application Stack</div>
 </div>
