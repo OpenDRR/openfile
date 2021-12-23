@@ -458,22 +458,28 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_executive_summary">Executive Summary</a></li>
 <li><a href="#_introduction">1. Introduction</a></li>
 <li><a href="#_platform_requirements">2. Platform Requirements</a></li>
-<li><a href="#_architecture">3. Architecture</a></li>
-<li><a href="#_lessons_learned">4. Lessons Learned</a>
+<li><a href="#_overview">3. Overview</a></li>
+<li><a href="#_architecture">4. Architecture</a>
 <ul class="sectlevel2">
-<li><a href="#_open_source_open_data_open_science_open_process">4.1. Open Source, Open Data, Open Science, Open Process</a></li>
-<li><a href="#_security">4.2. Security</a></li>
-<li><a href="#_optional_the_use_of_agile_principles_on_github_benefits_and_challenges">4.3. [optional] The use of Agile principles on GitHub; benefits and challenges</a></li>
-<li><a href="#_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious">4.4. [optional] opendrr.github.io got falsely flagged as phishing or malicious</a></li>
+<li><a href="#_data_processing_pipeline">4.1. Data Processing Pipeline</a></li>
+<li><a href="#_data_dissemination">4.2. Data Dissemination</a></li>
 </ul>
 </li>
-<li><a href="#_future_development">5. Future Development</a>
+<li><a href="#_lessons_learned">5. Lessons Learned</a>
 <ul class="sectlevel2">
-<li><a href="#_risk_profiler_v1">5.1. Risk Profiler (v1)</a></li>
-<li><a href="#_increase_in_scope_import_and_process_other_datasets_besides_earthquake">5.2. Increase in scope: Import and process other datasets besides earthquake</a></li>
-<li><a href="#_continued_automation_optimization_etc">5.3. Continued automation, optimization, etc.</a></li>
-<li><a href="#_promote_the_project">5.4. Promote the project</a></li>
-<li><a href="#_more">5.5. More&#8230;&#8203;</a></li>
+<li><a href="#_open_source_open_data_open_science_open_process">5.1. Open Source, Open Data, Open Science, Open Process</a></li>
+<li><a href="#_security">5.2. Security</a></li>
+<li><a href="#_optional_the_use_of_agile_principles_on_github_benefits_and_challenges">5.3. [optional] The use of Agile principles on GitHub; benefits and challenges</a></li>
+<li><a href="#_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious">5.4. [optional] opendrr.github.io got falsely flagged as phishing or malicious</a></li>
+</ul>
+</li>
+<li><a href="#_future_development">6. Future Development</a>
+<ul class="sectlevel2">
+<li><a href="#_risk_profiler_v1">6.1. Risk Profiler (v1)</a></li>
+<li><a href="#_increase_in_scope_import_and_process_other_datasets_besides_earthquake">6.2. Increase in scope: Import and process other datasets besides earthquake</a></li>
+<li><a href="#_continued_automation_optimization_etc">6.3. Continued automation, optimization, etc.</a></li>
+<li><a href="#_promote_the_project">6.4. Promote the project</a></li>
+<li><a href="#_more">6.5. More&#8230;&#8203;</a></li>
 </ul>
 </li>
 </ul>
@@ -484,10 +490,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_executive_summary"><a class="anchor" href="#_executive_summary"></a>Executive Summary</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>This is the abstract.
+s</p>
 </div>
 </div>
 </div>
@@ -495,20 +499,7 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 <h2 id="_introduction"><a class="anchor" href="#_introduction"></a>1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Github was chosen as the platform to support the development of the science outputs and related software, documentation, and tools. While well known in the software development community it is somewhat less known in the science community. However, the core concepts behind Github (e.g.: versioning, repositories, etc.) were more or less understood by key
-contributers.</p>
-</div>
-<div class="paragraph">
-<p>Built in features of Github such as continuous integration and deployment, community building, websites, and secure workspaces were seen as ways toward achieving an open and collaborative approach to science, one that seeks to build concensus and drive engagement throughout it&#8217;s lifecycle.</p>
-</div>
-<div class="paragraph">
-<p>Due to the diversity of use cases and user profiles for the information products (e.g.: maps, visualizations) it was clear that a single solution would not be sufficient. It was determined that a purpose built web application in addition to a customizable dashboard environment would likely meet the needs of all users.</p>
-</div>
-<div class="paragraph">
-<p>The dashboard environment is provided by <a href="https://dashboard.riskprofiler.ca">Kibana</a> which connects to an Elasticsearch document store. This environment is highly customizable and allows individuals and organizations to create public or private spaces where they can query and vizualize all available data.</p>
-</div>
-<div class="paragraph">
-<p>The purpose built application, called <a href="https://riskprofiler.ca">RiskProfiler</a>, is a custom web application that connects to a variety of services including the Elasticsearch document store. Build to be highly scalable and user friendly, it seeks to communicate the key messages relating to natural hazard (i.e.: earthquake) risk. It provides for some basic filtering and visualization in an area of interest, such as a community or region.</p>
+<p>A brief introduction to Pathways and the role of the platform in delivering the science outputs. Emphasis on evloving nature of the platform.</p>
 </div>
 </div>
 </div>
@@ -543,13 +534,60 @@ contributers.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_architecture"><a class="anchor" href="#_architecture"></a>3. Architecture</h2>
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>3. Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Do we need to do some diagram to show the flow?</p>
+<p>GitHub was chosen as the platform to support the development of the science outputs and related software, documentation, and tools. While well known in the software development community it is lesser known in the science community. However, the core concepts behind GitHub (e.g.: versioning, repositories, etc.) were more or less understood by key
+contributers.</p>
 </div>
 <div class="paragraph">
-<p>The OpenDRR platform extract-transform-load (ETL) pipeline consists of several open source technologies, namely PostgreSQL with PostGIS extension, Python, ElasticSearch/Kibana and PyGeoAPI. Each application is containerized using separate Docker containers which are orchestrated using Docker-Compose.</p>
+<p>Where possible, runnable code is provided to ensure transparency in the science. For example, an interested party could make a copy of a repository and replicate a particular output (e.g.: dataset) or even the entirety of the OpenDRR infrastucture. The platform makes heavy use of containerization and infrastructure as code technologies for rapid deployment on personal computing devices or on the cloud.</p>
+</div>
+<div class="paragraph">
+<p>Built in features of GitHub such as continuous integration and deployment, community building, websites, and secure workspaces were seen as ways toward achieving an open and collaborative approach to science, one that seeks to build concensus and drive engagement throughout it&#8217;s lifecycle.</p>
+</div>
+<div id="image-github" class="imageblock">
+<div class="content">
+<img src="img/opendrr-GitHub-en.png" alt="OpenDRR GitHub">
+</div>
+<div class="title">Figure 1. OpenDRR GitHub</div>
+</div>
+<div class="paragraph">
+<p>Due to the diversity of use cases and user profiles for the information products (e.g.: maps, visualizations) it was clear that a single solution would not be sufficient. It was determined that a purpose built web application in addition to a customizable dashboard environment would likely meet the needs of all users.</p>
+</div>
+<div class="paragraph">
+<p>The dashboard environment is provided by <a href="https://dashboard.riskprofiler.ca">Kibana</a> which connects to an Elasticsearch document store. This environment is highly customizable and allows individuals and organizations to create public or private spaces where they can query and vizualize all available data.</p>
+</div>
+<div id="image-kibana" class="imageblock">
+<div class="content">
+<img src="img/opendrr-kibana.png" alt="OpenDRR Kibana" width="300">
+</div>
+<div class="title">Figure 2. OpenDRR Kibana</div>
+</div>
+<div class="paragraph">
+<p>The purpose built application, called <a href="https://riskprofiler.ca">RiskProfiler</a>, is a custom web application that connects to a variety of services including the Elasticsearch document store. Built to be highly scalable and user friendly, it seeks to communicate the key messages relating to natural hazard (i.e.: earthquake) risk. It provides for some basic filtering and visualization in an area of interest, such as a community or region.</p>
+</div>
+<div id="image-riskprofiler" class="imageblock">
+<div class="content">
+<img src="img/opendrr-riskprofiler.png" alt="OpenDRR RiskProfiler" width="300">
+</div>
+<div class="title">Figure 3. OpenDRR RiskProfiler</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_architecture"><a class="anchor" href="#_architecture"></a>4. Architecture</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_data_processing_pipeline"><a class="anchor" href="#_data_processing_pipeline"></a>4.1. Data Processing Pipeline</h3>
+<div id="image-etl" class="imageblock">
+<div class="content">
+<img src="img/opendrr-etl.png" alt="OpenDRR Data Processing Pipeline">
+</div>
+<div class="title">Figure 4. OpenDRR Data Processing Pipeline</div>
+</div>
+<div class="paragraph">
+<p>The OpenDRR platform data processing pipeline consists of several open source technologies, namely PostgreSQL with PostGIS extension, Python, ElasticSearch/Kibana and PyGeoAPI. Each application is containerized using separate Docker containers which are orchestrated using Docker-Compose.</p>
 </div>
 <div class="paragraph">
 <p>Source data for this project includes the National Human Settlement Layers (physical exposure and social vulnerability), the National Seismic Risk model for Canada (CanadaSRM2, probabilistic), Canada’s National Earthquake Scenario Catalogue (deterministic), and boundary geometries are stored on the Open Disaster Risk Reduction Platform (OpenDRR) GitHub site using a large file storage service called Git LFS. The stack of technologies can be configured to run on a local machine with PostgreSQL and ElasticSearch environments running locally or can be configured to communicate with cloud deployments of these services. For example, the stack can be configured to communicate simultaneously with a PostgreSQL database on Amazon Web Services (AWS) Relational Database Service (RDS) and a Containerized ElasticSearch environment on an AWS Elastic Container Service (ECS). A common use case is to run the ETL process on a local desktop or AWS Elastic Compute Cloud (EC2) with a local containerized PostgreSQL environment and a cloud deployed ElasticSearch environment which can support a public or private application programming interface (API).</p>
@@ -568,12 +606,34 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 <p>These results are aggregated at several different spatial scales, building, sauid, and csd level. The building level is the finest spatial resolution and aggregates all buildings of simmilar construction type for a given neighborhood. The Sauid level of aggregation groups all building types across the whole neighbourhood polygon. The Census Sub-divison (CSD) aggregation is a coarse aggregtion of all assets within a given CSD as defined by Statistics Canada.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_data_dissemination"><a class="anchor" href="#_data_dissemination"></a>4.2. Data Dissemination</h3>
+<div class="sect3">
+<h4 id="_api_stack"><a class="anchor" href="#_api_stack"></a>4.2.1. API Stack</h4>
+<div id="image-apis" class="imageblock">
+<div class="content">
+<img src="img/opendrr-apis.png" alt="OpenDRR API Stack" width="400">
+</div>
+<div class="title">Figure 5. OpenDRR API Stack</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_application_stack"><a class="anchor" href="#_application_stack"></a>4.2.2. Application Stack</h4>
+<div id="image-apps" class="imageblock">
+<div class="content">
+<img src="img/opendrr-apps.png" alt="OpenDRR Application Stack" width="300">
+</div>
+<div class="title">Figure 6. OpenDRR Application Stack</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="sect1">
-<h2 id="_lessons_learned"><a class="anchor" href="#_lessons_learned"></a>4. Lessons Learned</h2>
+<h2 id="_lessons_learned"><a class="anchor" href="#_lessons_learned"></a>5. Lessons Learned</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_open_source_open_data_open_science_open_process"><a class="anchor" href="#_open_source_open_data_open_science_open_process"></a>4.1. Open Source, Open Data, Open Science, Open Process</h3>
+<h3 id="_open_source_open_data_open_science_open_process"><a class="anchor" href="#_open_source_open_data_open_science_open_process"></a>5.1. Open Source, Open Data, Open Science, Open Process</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -601,7 +661,7 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 </div>
 </div>
 <div class="sect2">
-<h3 id="_security"><a class="anchor" href="#_security"></a>4.2. Security</h3>
+<h3 id="_security"><a class="anchor" href="#_security"></a>5.2. Security</h3>
 <div class="paragraph">
 <p>Example: Apache Log4j vulnerability</p>
 </div>
@@ -624,11 +684,11 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 </div>
 </div>
 <div class="sect2">
-<h3 id="_optional_the_use_of_agile_principles_on_github_benefits_and_challenges"><a class="anchor" href="#_optional_the_use_of_agile_principles_on_github_benefits_and_challenges"></a>4.3. [optional] The use of Agile principles on GitHub; benefits and challenges</h3>
+<h3 id="_optional_the_use_of_agile_principles_on_github_benefits_and_challenges"><a class="anchor" href="#_optional_the_use_of_agile_principles_on_github_benefits_and_challenges"></a>5.3. [optional] The use of Agile principles on GitHub; benefits and challenges</h3>
 
 </div>
 <div class="sect2">
-<h3 id="_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious"><a class="anchor" href="#_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious"></a>4.4. [optional] opendrr.github.io got falsely flagged as phishing or malicious</h3>
+<h3 id="_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious"><a class="anchor" href="#_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious"></a>5.4. [optional] opendrr.github.io got falsely flagged as phishing or malicious</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -646,10 +706,10 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 </div>
 </div>
 <div class="sect1">
-<h2 id="_future_development"><a class="anchor" href="#_future_development"></a>5. Future Development</h2>
+<h2 id="_future_development"><a class="anchor" href="#_future_development"></a>6. Future Development</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_risk_profiler_v1"><a class="anchor" href="#_risk_profiler_v1"></a>5.1. Risk Profiler (v1)</h3>
+<h3 id="_risk_profiler_v1"><a class="anchor" href="#_risk_profiler_v1"></a>6.1. Risk Profiler (v1)</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -659,7 +719,7 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 </div>
 </div>
 <div class="sect2">
-<h3 id="_increase_in_scope_import_and_process_other_datasets_besides_earthquake"><a class="anchor" href="#_increase_in_scope_import_and_process_other_datasets_besides_earthquake"></a>5.2. Increase in scope: Import and process other datasets besides earthquake</h3>
+<h3 id="_increase_in_scope_import_and_process_other_datasets_besides_earthquake"><a class="anchor" href="#_increase_in_scope_import_and_process_other_datasets_besides_earthquake"></a>6.2. Increase in scope: Import and process other datasets besides earthquake</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -675,7 +735,7 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 </div>
 </div>
 <div class="sect2">
-<h3 id="_continued_automation_optimization_etc"><a class="anchor" href="#_continued_automation_optimization_etc"></a>5.3. Continued automation, optimization, etc.</h3>
+<h3 id="_continued_automation_optimization_etc"><a class="anchor" href="#_continued_automation_optimization_etc"></a>6.3. Continued automation, optimization, etc.</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -697,7 +757,7 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 </div>
 </div>
 <div class="sect2">
-<h3 id="_promote_the_project"><a class="anchor" href="#_promote_the_project"></a>5.4. Promote the project</h3>
+<h3 id="_promote_the_project"><a class="anchor" href="#_promote_the_project"></a>6.4. Promote the project</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -713,7 +773,7 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 </div>
 </div>
 <div class="sect2">
-<h3 id="_more"><a class="anchor" href="#_more"></a>5.5. More&#8230;&#8203;</h3>
+<h3 id="_more"><a class="anchor" href="#_more"></a>6.5. More&#8230;&#8203;</h3>
 
 </div>
 </div>
