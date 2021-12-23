@@ -1,6 +1,5 @@
 == Platform Requirements
 
-[.text-justify]
 To support the Pathways activities and deliverables a platform with the following features and functions was desired:
 
 -	Support open and collaborative development of science outputs
@@ -18,7 +17,6 @@ To support the Pathways activities and deliverables a platform with the followin
 ****
 
 [.left]
-[.text-justify]
 The generation of science outputs is becoming increasingly reliant on software code to automate processing, quality control, and publishing. Considerable attention was paid to alignment with best practices for Open Science (e.g.: FAIR principles) and scientific software code (e.g.: R5 principles).
 
 [.right]
@@ -30,11 +28,8 @@ The generation of science outputs is becoming increasingly reliant on software c
 - Reusable
 ****
 
-[.text-justify]
 The scale and scope of the data involved in the project necessitated an approach that not only streamlined the production of science-based outputs, but also provided for a high degree of collaboration across many disciplines (e.g., policy, technology, and science) and stakeholders (e.g., provincial, municipal).
 
-[.text-justify]
 Decision support requirements were well understood at the outset. A comprehensive set of requirements for a multitude of stakeholders was developed footnote:[https://opendrr.github.io/documentation/docs/opendrr-platform.html]. The diversity of the stakeholders and their specific needs necessitated a multi-channel approach since a single application was deemed to be insufficient to serve all use cases effectively.
 
-[.text-justify]
 With development being led out of the Government of Canada the platform had to comply with requirements for publishing science outputs including standardized metadata, open data, support for both official languages, accessibility, and compliance with scientific integrity and publication policies. The scientific integrity and publishing requirements were particularly problematic as they traditionally pushed the development of science behind closed doors, as such a novel and balanced approach would need to be taken to support the requirements of Pathways project.
