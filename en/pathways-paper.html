@@ -455,7 +455,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_executive_summary">Executive Summary</a></li>
+<li><a href="#_abstract">Abstract</a></li>
 <li><a href="#_introduction">1. Introduction</a></li>
 <li><a href="#_platform_requirements">2. Platform Requirements</a></li>
 <li><a href="#_overview">3. Overview</a></li>
@@ -487,11 +487,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_executive_summary"><a class="anchor" href="#_executive_summary"></a>Executive Summary</h2>
+<h2 id="_abstract"><a class="anchor" href="#_abstract"></a>Abstract</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This is the abstract.
-s</p>
+<p>This is the abstract.</p>
 </div>
 </div>
 </div>
@@ -506,8 +505,8 @@ s</p>
 <div class="sect1">
 <h2 id="_platform_requirements"><a class="anchor" href="#_platform_requirements"></a>2. Platform Requirements</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>To support the Pathways activities and deliverables a platform with the following features and functions were desired:</p>
+<div class="paragraph text-justify">
+<p>To support the Pathways activities and deliverables a platform with the following features and functions was desired:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -522,28 +521,76 @@ s</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>The generation of science outputs is becoming increasingly reliant on software code to automate processing, quality control, and publishing. The scale and scope of the data involved in the project necessitated an approach that not only streamlined the production of science-based outputs, but also provided for a high degree of collaboration across many disciplines (e.g., policy, technology, and science) and stakeholders (e.g., provincial, municipal).</p>
+<div class="sidebarblock right">
+<div class="content">
+<div class="title">R5 Principles</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Re-runnable (R1)</p>
+</li>
+<li>
+<p>Repeatable (R2)</p>
+</li>
+<li>
+<p>Reproducible (R3)</p>
+</li>
+<li>
+<p>Reusable (R4)</p>
+</li>
+<li>
+<p>Replicable (R5)</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>Decision support requirements were well understood at the outset. A comprehensive set of requirements for a multitude of stakeholders was developed [link to Minerva doc]. The diversity of the stakeholders and their specific needs necessitated a multi-channel approach since a single application was deemed to be insufficient to serve all use cases effectively.</p>
 </div>
-<div class="paragraph">
-<p>With development being led out of the Government of Canada imposed several requirements for publishing science outputs including standardized metadata, open data, support for both official languages, accessibility, and compliance with scientific integrity and publication policies. The scientific integrity and publishing requirements were particularly problematic as they traditionally pushed the development of science behind closed doors, as such a novel and balanced approach would need to be taken to support the requirements of Pathways project.</p>
+</div>
+<div class="paragraph left text-justify">
+<p>The generation of science outputs is becoming increasingly reliant on software code to automate processing, quality control, and publishing. Considerable attention was paid to alignment with best practices for Open Science (e.g.: FAIR principles) and scientific software code (e.g.: R5 principles).</p>
+</div>
+<div class="sidebarblock right">
+<div class="content">
+<div class="title">FAIR Principles</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Findable</p>
+</li>
+<li>
+<p>Accessible</p>
+</li>
+<li>
+<p>Interoperable</p>
+</li>
+<li>
+<p>Reusable</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph text-justify">
+<p>The scale and scope of the data involved in the project necessitated an approach that not only streamlined the production of science-based outputs, but also provided for a high degree of collaboration across many disciplines (e.g., policy, technology, and science) and stakeholders (e.g., provincial, municipal).</p>
+</div>
+<div class="paragraph text-justify">
+<p>Decision support requirements were well understood at the outset. A comprehensive set of requirements for a multitude of stakeholders was developed <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>. The diversity of the stakeholders and their specific needs necessitated a multi-channel approach since a single application was deemed to be insufficient to serve all use cases effectively.</p>
+</div>
+<div class="paragraph text-justify">
+<p>With development being led out of the Government of Canada the platform had to comply with requirements for publishing science outputs including standardized metadata, open data, support for both official languages, accessibility, and compliance with scientific integrity and publication policies. The scientific integrity and publishing requirements were particularly problematic as they traditionally pushed the development of science behind closed doors, as such a novel and balanced approach would need to be taken to support the requirements of Pathways project.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>3. Overview</h2>
 <div class="sectionbody">
-<div class="paragraph">
+<div class="paragraph text-justify">
 <p>GitHub was chosen as the platform to support the development of the science outputs and related software, documentation, and tools. While well known in the software development community it is lesser known in the science community. However, the core concepts behind GitHub (e.g.: versioning, repositories, etc.) were more or less understood by key
 contributers.</p>
 </div>
-<div class="paragraph">
+<div class="paragraph text-justify">
 <p>Where possible, runnable code is provided to ensure transparency in the science. For example, an interested party could make a copy of a repository and replicate a particular output (e.g.: dataset) or even the entirety of the OpenDRR infrastucture. The platform makes heavy use of containerization and infrastructure as code technologies for rapid deployment on personal computing devices or on the cloud.</p>
 </div>
-<div class="paragraph">
+<div class="paragraph text-justify">
 <p>Built in features of GitHub such as continuous integration and deployment, community building, websites, and secure workspaces were seen as ways toward achieving an open and collaborative approach to science, one that seeks to build concensus and drive engagement throughout it&#8217;s lifecycle.</p>
 </div>
 <div id="image-github" class="imageblock">
@@ -552,11 +599,11 @@ contributers.</p>
 </div>
 <div class="title">Figure 1. OpenDRR GitHub</div>
 </div>
-<div class="paragraph">
+<div class="paragraph text-justify">
 <p>Due to the diversity of use cases and user profiles for the information products (e.g.: maps, visualizations) it was clear that a single solution would not be sufficient. It was determined that a purpose built web application in addition to a customizable dashboard environment would likely meet the needs of all users.</p>
 </div>
-<div class="paragraph">
-<p>The dashboard environment is provided by <a href="https://dashboard.riskprofiler.ca">Kibana</a> which connects to an Elasticsearch document store. This environment is highly customizable and allows individuals and organizations to create public or private spaces where they can query and vizualize all available data.</p>
+<div class="paragraph text-justify">
+<p>The dashboard environment is provided by Kibana<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> which connects to an Elasticsearch document store. This environment is highly customizable and allows individuals and organizations to create public or private spaces where they can query and vizualize all available data in an intuitive way.</p>
 </div>
 <div id="image-kibana" class="imageblock">
 <div class="content">
@@ -564,8 +611,8 @@ contributers.</p>
 </div>
 <div class="title">Figure 2. OpenDRR Kibana</div>
 </div>
-<div class="paragraph">
-<p>The purpose built application, called <a href="https://riskprofiler.ca">RiskProfiler</a>, is a custom web application that connects to a variety of services including the Elasticsearch document store. Built to be highly scalable and user friendly, it seeks to communicate the key messages relating to natural hazard (i.e.: earthquake) risk. It provides for some basic filtering and visualization in an area of interest, such as a community or region.</p>
+<div class="paragraph text-justify">
+<p>The purpose built application, called RiskProfiler<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>, is a custom web application that connects to a variety of services including the Elasticsearch document store. Built to be highly scalable and user friendly, it seeks to communicate the key messages relating to natural hazard risk. It provides for some basic filtering and visualization in an area of interest, such as a community or region.</p>
 </div>
 <div id="image-riskprofiler" class="imageblock">
 <div class="content">
@@ -573,37 +620,52 @@ contributers.</p>
 </div>
 <div class="title">Figure 3. OpenDRR RiskProfiler</div>
 </div>
+<div class="paragraph text-justify">
+<p>In it&#8217;s initial release, RiskProfiler will focus primarily on earthquake risk but the intention is to include additional natural hazard risk assessemnts including flood, wildfire, landslides and tsunami.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_architecture"><a class="anchor" href="#_architecture"></a>4. Architecture</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Brief description of achitecture with goals/principles.</p>
+</div>
+<div class="paragraph text-justify">
+<p>Source data for this project includes the National Human Settlement Layers (physical exposure and social vulnerability), the National Seismic Risk model for Canada (CanadaSRM2, probabilistic), Canada’s National Earthquake Scenario Catalogue (deterministic), and boundary geometries are stored in the Open Disaster Risk Reduction Platform (OpenDRR) organisation on GitHub.</p>
+</div>
+<div id="image-architecture" class="imageblock  text-center">
+<div class="content">
+<img src="img/opendrr-architecture.png" alt="OpenDRR Architecture Overview">
+</div>
+<div class="title">Figure 4. OpenDRR Architecture Overview</div>
+</div>
 <div class="sect2">
 <h3 id="_data_processing_pipeline"><a class="anchor" href="#_data_processing_pipeline"></a>4.1. Data Processing Pipeline</h3>
-<div id="image-etl" class="imageblock">
+<div class="paragraph text-justify">
+<p>The OpenDRR platform data processing pipeline is responsible for extracting, transforming and loading (ETL) data. It consists of several open source technologies, namely PostgreSQL with PostGIS extension, Python, ElasticSearch/Kibana and PyGeoAPI. Each application is containerized using separate Docker containers which are orchestrated using Docker-Compose.</p>
+</div>
+<div id="image-etl" class="imageblock text-center">
 <div class="content">
-<img src="img/opendrr-etl.png" alt="OpenDRR Data Processing Pipeline">
+<img src="img/opendrr-etl.png" alt="OpenDRR Data Processing Pipeline" width="600">
 </div>
-<div class="title">Figure 4. OpenDRR Data Processing Pipeline</div>
+<div class="title">Figure 5. OpenDRR Data Processing Pipeline</div>
 </div>
-<div class="paragraph">
-<p>The OpenDRR platform data processing pipeline consists of several open source technologies, namely PostgreSQL with PostGIS extension, Python, ElasticSearch/Kibana and PyGeoAPI. Each application is containerized using separate Docker containers which are orchestrated using Docker-Compose.</p>
+<div class="paragraph text-justify">
+<p>The stack of technologies can be configured to run on a local machine with PostgreSQL and ElasticSearch environments running locally or can be configured to communicate with cloud deployments of these services. For example, the stack can be configured to communicate simultaneously with a PostgreSQL database on Amazon Web Services (AWS) Relational Database Service (RDS) and a Containerized ElasticSearch environment on an AWS Elastic Container Service (ECS). A common use case is to run the ETL process on a local desktop or AWS Elastic Compute Cloud (EC2) with a local containerized PostgreSQL environment and a cloud deployed ElasticSearch environment which can support a public or private application programming interface (API).</p>
 </div>
-<div class="paragraph">
-<p>Source data for this project includes the National Human Settlement Layers (physical exposure and social vulnerability), the National Seismic Risk model for Canada (CanadaSRM2, probabilistic), Canada’s National Earthquake Scenario Catalogue (deterministic), and boundary geometries are stored on the Open Disaster Risk Reduction Platform (OpenDRR) GitHub site using a large file storage service called Git LFS. The stack of technologies can be configured to run on a local machine with PostgreSQL and ElasticSearch environments running locally or can be configured to communicate with cloud deployments of these services. For example, the stack can be configured to communicate simultaneously with a PostgreSQL database on Amazon Web Services (AWS) Relational Database Service (RDS) and a Containerized ElasticSearch environment on an AWS Elastic Container Service (ECS). A common use case is to run the ETL process on a local desktop or AWS Elastic Compute Cloud (EC2) with a local containerized PostgreSQL environment and a cloud deployed ElasticSearch environment which can support a public or private application programming interface (API).</p>
-</div>
-<div class="paragraph">
+<div class="paragraph text-justify">
 <p>The ETL process currently relies on a main shell script titled 'add_data.sh' which downloads the required source data files including comma separated value (csv), and GeoPackages (gpkg) into the local filesystem and performs necessary transformations to load the data into a PostgreSQL database. The script is written to be flexible enough to load any number of conformant deterministic earthquake scenarios and national seismic risk model data? and allows some flexibility in the contents of the input data as long as a minimal number of required fields are present. Once the required source data has been loaded into the database, a number of Structured Query Language (SQL) scripts help transform the data into a framework of meaningful earthquake risk indicators which in turn gets pushed to ES/Kibana ??? .</p>
 </div>
-<div class="paragraph">
+<div class="paragraph text-justify">
 <p>Discuss the postgresql database? Briefly?  Schemas?
 The PostgreSQL database is created and has PostGIS extension enabled to allow for spatial data queries.   The source datas are loaded into their respected schema names and the results are generated into their respected schemas with results_ prefix.????</p>
 </div>
-<div class="paragraph">
+<div class="paragraph text-justify">
 <p>Results are calculated and/or aggregated at different spatial scales dependent on the data.  For National Human Settlement Layers the results are in settled areas.  The probabilistic and deterministic data are calculated at the building level and aggregated up to the settled area and census subdivision levels.</p>
 </div>
-<div class="paragraph">
-<p>These results are aggregated at several different spatial scales, building, sauid, and csd level. The building level is the finest spatial resolution and aggregates all buildings of simmilar construction type for a given neighborhood. The Sauid level of aggregation groups all building types across the whole neighbourhood polygon. The Census Sub-divison (CSD) aggregation is a coarse aggregtion of all assets within a given CSD as defined by Statistics Canada.</p>
+<div class="paragraph text-justify">
+<p>These results are aggregated at several different spatial scales, building, sauid, and csd level. The building level is the finest spatial resolution and aggregates all buildings of simmilar construction type for a given neighborhood. The Sauid level of aggregation groups all building types across the whole neighbourhood polygon. The Census Sub-divison (CSD) aggregation is a coarse aggregation of all assets within a given CSD as defined by Statistics Canada.</p>
 </div>
 </div>
 <div class="sect2">
@@ -614,7 +676,7 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 <div class="content">
 <img src="img/opendrr-apis.png" alt="OpenDRR API Stack" width="400">
 </div>
-<div class="title">Figure 5. OpenDRR API Stack</div>
+<div class="title">Figure 6. OpenDRR API Stack</div>
 </div>
 </div>
 <div class="sect3">
@@ -623,7 +685,7 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 <div class="content">
 <img src="img/opendrr-apps.png" alt="OpenDRR Application Stack" width="300">
 </div>
-<div class="title">Figure 6. OpenDRR Application Stack</div>
+<div class="title">Figure 7. OpenDRR Application Stack</div>
 </div>
 </div>
 </div>
@@ -777,6 +839,18 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 
 </div>
 </div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. <a href="https://opendrr.github.io/documentation/docs/opendrr-platform.html" class="bare">https://opendrr.github.io/documentation/docs/opendrr-platform.html</a>
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. <a href="https://dashboard.riskprofiler.ca" class="bare">https://dashboard.riskprofiler.ca</a>
+</div>
+<div class="footnote" id="_footnotedef_3">
+<a href="#_footnoteref_3">3</a>. <a href="https://riskprofiler.ca" class="bare">https://riskprofiler.ca</a>
 </div>
 </div>
 <div id="footer">
