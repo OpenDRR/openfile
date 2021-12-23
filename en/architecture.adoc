@@ -1,8 +1,12 @@
 == Architecture
 
-Do we need to do some diagram to show the flow?
+=== Data Processing Pipeline
 
-The OpenDRR platform extract-transform-load (ETL) pipeline consists of several open source technologies, namely PostgreSQL with PostGIS extension, Python, ElasticSearch/Kibana and PyGeoAPI. Each application is containerized using separate Docker containers which are orchestrated using Docker-Compose. 
+[#image-etl]
+.OpenDRR Data Processing Pipeline
+image::img/opendrr-etl.png[OpenDRR Data Processing Pipeline]
+
+The OpenDRR platform data processing pipeline consists of several open source technologies, namely PostgreSQL with PostGIS extension, Python, ElasticSearch/Kibana and PyGeoAPI. Each application is containerized using separate Docker containers which are orchestrated using Docker-Compose.
 
 Source data for this project includes the National Human Settlement Layers (physical exposure and social vulnerability), the National Seismic Risk model for Canada (CanadaSRM2, probabilistic), Canada’s National Earthquake Scenario Catalogue (deterministic), and boundary geometries are stored on the Open Disaster Risk Reduction Platform (OpenDRR) GitHub site using a large file storage service called Git LFS. The stack of technologies can be configured to run on a local machine with PostgreSQL and ElasticSearch environments running locally or can be configured to communicate with cloud deployments of these services. For example, the stack can be configured to communicate simultaneously with a PostgreSQL database on Amazon Web Services (AWS) Relational Database Service (RDS) and a Containerized ElasticSearch environment on an AWS Elastic Container Service (ECS). A common use case is to run the ETL process on a local desktop or AWS Elastic Compute Cloud (EC2) with a local containerized PostgreSQL environment and a cloud deployed ElasticSearch environment which can support a public or private application programming interface (API).
 
@@ -15,3 +19,16 @@ Results are calculated and/or aggregated at different spatial scales dependent o
 
 These results are aggregated at several different spatial scales, building, sauid, and csd level. The building level is the finest spatial resolution and aggregates all buildings of simmilar construction type for a given neighborhood. The Sauid level of aggregation groups all building types across the whole neighbourhood polygon. The Census Sub-divison (CSD) aggregation is a coarse aggregtion of all assets within a given CSD as defined by Statistics Canada. 
 
+=== Data Dissemination
+
+==== API's
+
+[#image-apis]
+.OpenDRR API Stack
+image::img/opendrr-apis.png[OpenDRR API Stack, 400]
+
+==== Applications
+
+[#image-apps]
+.OpenDRR Application Stack
+image::img/opendrr-apps.png[OpenDRR Application Stack, 300]
