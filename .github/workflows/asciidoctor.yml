@@ -22,11 +22,7 @@ jobs:
           sudo apt install asciidoctor ruby-asciidoctor-pdf
 
       - name: Build with asciidoctor and asciidoctor-pdf
-        run: |
-          asciidoctor -D public/en en/pathways-paper.adoc
-          asciidoctor -D public/fr fr/article-sur-les-voies-d’accès.adoc
-          asciidoctor-pdf -D public/en en/pathways-paper.adoc
-          asciidoctor-pdf -D public/fr fr/article-sur-les-voies-d’accès.adoc
+        run: make
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
