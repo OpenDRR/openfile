@@ -467,10 +467,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_lessons_learned">5. Lessons Learned</a>
 <ul class="sectlevel2">
-<li><a href="#_open_source_open_data_open_science_open_process">5.1. Open Source, Open Data, Open Science, Open Process</a></li>
-<li><a href="#_security">5.2. Security</a></li>
-<li><a href="#_optional_the_use_of_agile_principles_on_github_benefits_and_challenges">5.3. [optional] The use of Agile principles on GitHub; benefits and challenges</a></li>
-<li><a href="#_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious">5.4. [optional] opendrr.github.io got falsely flagged as phishing or malicious</a></li>
+<li><a href="#_working_in_the_open">5.1. Working in the Open</a></li>
+<li><a href="#_continuous_integration">5.2. Continuous Integration</a></li>
+<li><a href="#_security">5.3. Security</a></li>
+<li><a href="#_the_software_development_lifecycle">5.4. The Software Development Lifecycle</a></li>
+<li><a href="#_github_restrictions_on_file_size">5.5. Github restrictions on file size</a></li>
+<li><a href="#_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious">5.6. [optional] opendrr.github.io got falsely flagged as phishing or malicious</a></li>
 </ul>
 </li>
 <li><a href="#_future_development">6. Future Development</a>
@@ -651,7 +653,7 @@ contributers.</p>
 <div class="title">Figure 3. OpenDRR RiskProfiler</div>
 </div>
 <div class="paragraph">
-<p>In it&#8217;s initial release, RiskProfiler will focus primarily on earthquake risk but the intention is to include additional natural hazard risk assessemnts including flood, wildfire, landslides and tsunami.</p>
+<p>In it&#8217;s initial release, RiskProfiler will focus primarily on earthquake risk but the intention is to include additional natural hazard risk assessements including flood, wildfire, landslides and tsunami.</p>
 </div>
 </div>
 </div>
@@ -673,7 +675,7 @@ contributers.</p>
 <div class="sect2">
 <h3 id="_data_processing_pipeline"><a class="anchor" href="#_data_processing_pipeline"></a>4.1. Data Processing Pipeline</h3>
 <div class="paragraph">
-<p>The OpenDRR platform data processing pipeline is responsible for extracting, transforming and loading (ETL) data. It consists of several open source technologies, namely PostgreSQL with PostGIS extension, Python, ElasticSearch/Kibana and PyGeoAPI. Each application is containerized using separate Docker containers which are orchestrated using Docker-Compose.</p>
+<p>The OpenDRR platform data processing pipeline is responsible for extracting, transforming and loading (ETL) data. It consists of several open source technologies, namely PostgreSQL with PostGIS extension, Python, ElasticSearch/Kibana, and PyGeoAPI. Each of the applications is containerized using separate Docker containers orchestrated with Docker-Compose.</p>
 </div>
 <div id="image-etl" class="imageblock text-center">
 <div class="content">
@@ -725,7 +727,16 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 <h2 id="_lessons_learned"><a class="anchor" href="#_lessons_learned"></a>5. Lessons Learned</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_open_source_open_data_open_science_open_process"><a class="anchor" href="#_open_source_open_data_open_science_open_process"></a>5.1. Open Source, Open Data, Open Science, Open Process</h3>
+<h3 id="_working_in_the_open"><a class="anchor" href="#_working_in_the_open"></a>5.1. Working in the Open</h3>
+<div class="paragraph">
+<p>Working in the open is standard practice in the software community, but this is not the case in the scientific community. Despite many science-based institutions promulgating FAIR<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup> and Open Science<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup>, they largely ignore the very principles upon which these are based. Instead of working in the open from the outset, science continues to be carried out behind closed doors until such time that a final product is formally published.</p>
+</div>
+<div class="paragraph">
+<p>The science-based organisation under which the OpenDRR platform is being developed decided to take a more liberal approach, open by default but closed where required. Unfortunately, internal policies regarding Open Science were not yet fully developed so the default approach was to do much of the actual science modeling and development in private repositories until peer review can be completed. An unfortunate consequence of misguided but well-intentioned policies (e.g.: NRCan&#8217;s Scientific Integrity Policy).</p>
+</div>
+<div class="paragraph">
+<p>While not ideal, the platform did demonstrate that peer-review of science using GitHub was tractable. Transparency in the science that informs government policy is an important part of any democracy, and so the platform will continue to aspire towards a future where policy-driven decisions are supported by data that is aligned with the principles of FAIR and Open Science.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -753,9 +764,18 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 </div>
 </div>
 <div class="sect2">
-<h3 id="_security"><a class="anchor" href="#_security"></a>5.2. Security</h3>
+<h3 id="_continuous_integration"><a class="anchor" href="#_continuous_integration"></a>5.2. Continuous Integration</h3>
+<div class="paragraph">
+<p>Usage of CI (e.g.: GitHub Actions) to generate release assets, do QA, and run data processing scripts.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security"><a class="anchor" href="#_security"></a>5.3. Security</h3>
 <div class="paragraph">
 <p>Example: Apache Log4j vulnerability</p>
+</div>
+<div class="paragraph">
+<p>Built-in features in GitHub helped to ensure that code was secure and up to date (e.g.: dependabot).</p>
 </div>
 <div class="ulist">
 <ul>
@@ -776,11 +796,19 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 </div>
 </div>
 <div class="sect2">
-<h3 id="_optional_the_use_of_agile_principles_on_github_benefits_and_challenges"><a class="anchor" href="#_optional_the_use_of_agile_principles_on_github_benefits_and_challenges"></a>5.3. [optional] The use of Agile principles on GitHub; benefits and challenges</h3>
-
+<h3 id="_the_software_development_lifecycle"><a class="anchor" href="#_the_software_development_lifecycle"></a>5.4. The Software Development Lifecycle</h3>
+<div class="paragraph">
+<p>Agile works for software but not so well with science!</p>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious"><a class="anchor" href="#_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious"></a>5.4. [optional] opendrr.github.io got falsely flagged as phishing or malicious</h3>
+<h3 id="_github_restrictions_on_file_size"><a class="anchor" href="#_github_restrictions_on_file_size"></a>5.5. Github restrictions on file size</h3>
+<div class="paragraph">
+<p>The file size restrictions imposed by the GitHub platform were an issue for some repositories.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious"><a class="anchor" href="#_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious"></a>5.6. [optional] opendrr.github.io got falsely flagged as phishing or malicious</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -881,6 +909,12 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 </div>
 <div class="footnote" id="_footnotedef_3">
 <a href="#_footnoteref_3">3</a>. <a href="https://riskprofiler.ca" class="bare">https://riskprofiler.ca</a>
+</div>
+<div class="footnote" id="_footnotedef_4">
+<a href="#_footnoteref_4">4</a>. link-to-FAIR-Principles
+</div>
+<div class="footnote" id="_footnotedef_5">
+<a href="#_footnoteref_5">5</a>. link-to-Open-Science
 </div>
 </div>
 <div id="footer">
