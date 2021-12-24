@@ -1,7 +1,13 @@
 == Lessons Learned
 // draft: very early brainstorming; by no means complete
 
-=== Open Source, Open Data, Open Science, Open Process
+=== Working in the Open
+
+Working in the open is standard practice in the software community, but this is not the case in the scientific community. Despite many science-based institutions promulgating FAIRfootnote:[link-to-FAIR-Principles] and Open Sciencefootnote:[link-to-Open-Science], they largely ignore the very principles upon which these are based. Instead of working in the open from the outset, science continues to be carried out behind closed doors until such time that a final product is formally published.
+
+The science-based organisation under which the OpenDRR platform is being developed decided to take a more liberal approach, open by default but closed where required. Unfortunately, internal policies regarding Open Science were not yet fully developed so the default approach was to do much of the actual science modeling and development in private repositories until peer review can be completed. An unfortunate consequence of misguided but well-intentioned policies (e.g.: NRCan's Scientific Integrity Policy).
+
+While not ideal, the platform did demonstrate that peer-review of science using GitHub was tractable. Transparency in the science that informs government policy is an important part of any democracy, and so the platform will continue to aspire towards a future where policy-driven decisions are supported by data that is aligned with the principles of FAIR and Open Science.
 
 * (May seem scary at first?) but many benefits
 * full openness, transparency, accountability
@@ -12,16 +18,29 @@
 * pygeoapi
 * etc.
 
+=== Continuous Integration
+
+Usage of CI (e.g.: GitHub Actions) to generate release assets, do QA, and run data processing scripts.
+
 === Security
 
 Example: Apache Log4j vulnerability
+
+Built-in features in GitHub helped to ensure that code was secure and up to date (e.g.: dependabot). 
 
 * We got confirmation from ITSEC that our ES endpoint was attacked. Since we were running 7.12.0 the attack failed.  Lesson: keep your software up to date.  (Credit: Joost,)
 ** https://xeraa.net/blog/2021_mitigate-log4j2-log4shell-elasticsearch/[Mitigate Log4j2 / Log4Shell in Elasticsearch]
 
 * (a little bit about) keeping up-to-date vs. compatibility-breaking changes (e.g. Python 3.8 to 3.9); be prepared for extra work hours (manpower?) to resolve compatibility issues during upgrade...
 
-=== [optional] The use of Agile principles on GitHub; benefits and challenges
+=== The Software Development Lifecycle
+
+Agile works for software but not so well with science!
+
+=== Github restrictions on file size
+
+The file size restrictions imposed by the GitHub platform were an issue for some repositories. 
+
 
 === [optional] opendrr.github.io got falsely flagged as phishing or malicious
 

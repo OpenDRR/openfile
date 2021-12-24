@@ -31,4 +31,4 @@ The purpose built application, called RiskProfilerfootnote:[https://riskprofiler
 .OpenDRR RiskProfiler
 image::img/opendrr-riskprofiler.png[OpenDRR RiskProfiler, 300]
 
-In it's initial release, RiskProfiler will focus primarily on earthquake risk but the intention is to include additional natural hazard risk assessemnts including flood, wildfire, landslides and tsunami.
+In it's initial release, RiskProfiler will focus primarily on earthquake risk but the intention is to include additional natural hazard risk assessements including flood, wildfire, landslides and tsunami.
