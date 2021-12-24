@@ -1,3 +1,5 @@
+:imagesdir: img
+
 == Overview
 
 [.text-justify]
@@ -12,7 +14,7 @@ Built in features of GitHub such as continuous integration and deployment, commu
 
 [#image-github]
 .OpenDRR GitHub
-image::img/opendrr-GitHub-en.png[OpenDRR GitHub]
+image::opendrr-GitHub-en.png[OpenDRR GitHub]
 
 [.text-justify]
 Due to the diversity of use cases and user profiles for the information products (e.g.: maps, visualizations) it was clear that a single solution would not be sufficient. It was determined that a purpose built web application in addition to a customizable dashboard environment would likely meet the needs of all users.
