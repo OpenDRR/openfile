@@ -2,33 +2,29 @@
 
 == Overview
 
-[.text-justify]
+GitHub was chosen as the platform to support the development of the science outputs and related software, documentation, and tools. While well known in the software development community, it is lesser-known in the science community. However, the core concepts behind GitHub (e.g., versioning, repositories) were more or less understood by key 
+contributors. 
 
-GitHub was chosen as the platform to support the development of the science outputs and related software, documentation, and tools. While well known in the software development community it is lesser known in the science community. However, the core concepts behind GitHub (e.g.: versioning, repositories, etc.) were more or less understood by key 
-contributers. 
+Where possible, runnable code is available to ensure transparency in the science. For example, an interested party could clone a repository and replicate a particular output, e.g., a dataset or even the entirety of the OpenDRR infrastructure. The platform makes heavy use of containerization and infrastructure as code technologies for rapid deployment on personal computing devices or the cloud.
 
-Where possible, runnable code is provided to ensure transparency in the science. For example, an interested party could make a copy of a repository and replicate a particular output (e.g.: dataset) or even the entirety of the OpenDRR infrastucture. The platform makes heavy use of containerization and infrastructure as code technologies for rapid deployment on personal computing devices or on the cloud.
-
-[.text-justify]
-Built in features of GitHub such as continuous integration and deployment, community building, websites, and secure workspaces were seen as ways toward achieving an open and collaborative approach to science, one that seeks to build concensus and drive engagement throughout it's lifecycle.
+Built-in features of GitHub such as continuous integration and deployment, community building, websites, and secure workspaces are tools for achieving an open and collaborative approach to science, one that seeks to build consensus and drive engagement throughout its lifecycle.
 
 [#image-github]
 .OpenDRR GitHub
 image::opendrr-github-en.png[OpenDRR GitHub]
 
-[.text-justify]
-Due to the diversity of use cases and user profiles for the information products (e.g.: maps, visualizations) it was clear that a single solution would not be sufficient. It was determined that a purpose built web application in addition to a customizable dashboard environment would likely meet the needs of all users.
+Due to the diversity of use cases and user profiles for the information products (e.g., maps, visualizations), it was clear that a single solution would not be sufficient. It was determined that a purpose-built web application and a dashboard environment would be required to meet the needs of all users.
 
-The dashboard environment is provided by Kibanafootnote:[https://dashboard.riskprofiler.ca] which connects to an Elasticsearch document store. This environment is highly customizable and allows individuals and organizations to create public or private spaces where they can query and vizualize all available data in an intuitive way.
+The dashboard environment, provided by Kibana footnote:[https://dashboard.riskprofiler.ca] connects to an Elasticsearch document store. This environment is highly customizable and allows individuals and organizations to create public or private spaces where they can query and intuitively visualize all available data.
 
 [#image-kibana]
 .OpenDRR Kibana
 image::opendrr-kibana.png[OpenDRR Kibana, 300]
 
-The purpose built application, called RiskProfilerfootnote:[https://riskprofiler.ca], is a custom web application that connects to a variety of services including the Elasticsearch document store. Built to be highly scalable and user friendly, it seeks to communicate the key messages relating to natural hazard risk. It provides for some basic filtering and visualization in an area of interest, such as a community or region.
+The purpose-built application, called RiskProfiler footnote:[https://riskprofiler.ca] is a custom web application. Built to be highly scalable and user-friendly, it seeks to communicate the key messages relating to natural hazard risk. It provides basic filtering and visualization in an area of interest, such as a community or region.
 
 [#image-riskprofiler]
 .OpenDRR RiskProfiler
 image::opendrr-riskprofiler.png[OpenDRR RiskProfiler, 300]
 
-In it's initial release, RiskProfiler will focus primarily on earthquake risk but the intention is to include additional natural hazard risk assessements including flood, wildfire, landslides and tsunami.
+In the initial release, RiskProfiler will focus primarily on earthquake risk, but the intention is to include additional natural hazard risk assessments, e.g., flood, wildfire, landslides, and tsunami.
