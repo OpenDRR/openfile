@@ -538,18 +538,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_platform_requirements"><a class="anchor" href="#_platform_requirements"></a>2. Platform Requirements</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To support the Pathways activities and deliverables a platform with the following features and functions was desired:</p>
+<p>To support the Pathways activities a platform with the following features and attributes was required:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Support open and collaborative development of science outputs</p>
+<p>Supports open and collaborative development of science outputs</p>
 </li>
 <li>
-<p>Centralize access to the science outputs</p>
+<p>Centralizes access to the science outputs</p>
 </li>
 <li>
-<p>Provide tools and applications to engage the public and support decision making</p>
+<p>Provides tools and applications to engage the public and support decision making</p>
 </li>
 </ul>
 </div>
@@ -578,7 +578,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="paragraph left">
-<p>The generation of science outputs is becoming increasingly reliant on software code to automate processing, quality control, and publishing. Considerable attention was paid to alignment with best practices for Open Science (e.g.: FAIR principles) and scientific software code (e.g.: R5 principles).</p>
+<p>The generation of science outputs is becoming increasingly reliant on software code to automate processing, quality control, and publishing. Considerable attention was paid to alignment with best practices for Open Science (i.e., FAIR Principles) and scientific software code (i.e., R5 Principles).</p>
 </div>
 <div class="sidebarblock right">
 <div class="content">
@@ -608,22 +608,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Decision support requirements were well understood at the outset. A comprehensive set of requirements for a multitude of stakeholders was developed <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>. The diversity of the stakeholders and their specific needs necessitated a multi-channel approach since a single application was deemed to be insufficient to serve all use cases effectively.</p>
 </div>
 <div class="paragraph">
-<p>With development being led out of the Government of Canada the platform had to comply with requirements for publishing science outputs including standardized metadata, open data, support for both official languages, accessibility, and compliance with scientific integrity and publication policies. The scientific integrity and publishing requirements were particularly problematic as they traditionally pushed the development of science behind closed doors, as such a novel and balanced approach would need to be taken to support the requirements of Pathways project.</p>
+<p>With development led out of the Government of Canada the platform had to comply with requirements for publishing science outputs including standardized metadata, open data, support for both official languages, accessibility, and compliance with scientific integrity and publication policies. The scientific integrity and publishing requirements were particularly problematic as they traditionally pushed the development of the science behind closed doors. To comply with policy while supporting the objectives of the project, a balanced approach that prioritizes openness and transparency is needed.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_overview"><a class="anchor" href="#_overview"></a>3. Overview</h2>
 <div class="sectionbody">
-<div class="paragraph text-justify">
-<p>GitHub was chosen as the platform to support the development of the science outputs and related software, documentation, and tools. While well known in the software development community it is lesser known in the science community. However, the core concepts behind GitHub (e.g.: versioning, repositories, etc.) were more or less understood by key
-contributers.</p>
+<div class="paragraph">
+<p>GitHub was chosen as the platform to support the development of the science outputs and related software, documentation, and tools. While well known in the software development community, it is lesser-known in the science community. However, the core concepts behind GitHub (e.g., versioning, repositories) were more or less understood by key
+contributors.</p>
 </div>
 <div class="paragraph">
-<p>Where possible, runnable code is provided to ensure transparency in the science. For example, an interested party could make a copy of a repository and replicate a particular output (e.g.: dataset) or even the entirety of the OpenDRR infrastucture. The platform makes heavy use of containerization and infrastructure as code technologies for rapid deployment on personal computing devices or on the cloud.</p>
+<p>Where possible, runnable code is available to ensure transparency in the science. For example, an interested party could clone a repository and replicate a particular output, e.g., a dataset or even the entirety of the OpenDRR infrastructure. The platform makes heavy use of containerization and infrastructure as code technologies for rapid deployment on personal computing devices or the cloud.</p>
 </div>
-<div class="paragraph text-justify">
-<p>Built in features of GitHub such as continuous integration and deployment, community building, websites, and secure workspaces were seen as ways toward achieving an open and collaborative approach to science, one that seeks to build concensus and drive engagement throughout it&#8217;s lifecycle.</p>
+<div class="paragraph">
+<p>Built-in features of GitHub such as continuous integration and deployment, community building, websites, and secure workspaces are tools for achieving an open and collaborative approach to science, one that seeks to build consensus and drive engagement throughout its lifecycle.</p>
 </div>
 <div id="image-github" class="imageblock">
 <div class="content">
@@ -631,11 +631,11 @@ contributers.</p>
 </div>
 <div class="title">Figure 1. OpenDRR GitHub</div>
 </div>
-<div class="paragraph text-justify">
-<p>Due to the diversity of use cases and user profiles for the information products (e.g.: maps, visualizations) it was clear that a single solution would not be sufficient. It was determined that a purpose built web application in addition to a customizable dashboard environment would likely meet the needs of all users.</p>
+<div class="paragraph">
+<p>Due to the diversity of use cases and user profiles for the information products (e.g., maps, visualizations), it was clear that a single solution would not be sufficient. It was determined that a purpose-built web application and a dashboard environment would be required to meet the needs of all users.</p>
 </div>
 <div class="paragraph">
-<p>The dashboard environment is provided by Kibana<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> which connects to an Elasticsearch document store. This environment is highly customizable and allows individuals and organizations to create public or private spaces where they can query and vizualize all available data in an intuitive way.</p>
+<p>The dashboard environment, provided by Kibana <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> connects to an Elasticsearch document store. This environment is highly customizable and allows individuals and organizations to create public or private spaces where they can query and intuitively visualize all available data.</p>
 </div>
 <div id="image-kibana" class="imageblock">
 <div class="content">
@@ -644,7 +644,7 @@ contributers.</p>
 <div class="title">Figure 2. OpenDRR Kibana</div>
 </div>
 <div class="paragraph">
-<p>The purpose built application, called RiskProfiler<sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>, is a custom web application that connects to a variety of services including the Elasticsearch document store. Built to be highly scalable and user friendly, it seeks to communicate the key messages relating to natural hazard risk. It provides for some basic filtering and visualization in an area of interest, such as a community or region.</p>
+<p>The purpose-built application, called RiskProfiler <sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup> is a custom web application. Built to be highly scalable and user-friendly, it seeks to communicate the key messages relating to natural hazard risk. It provides basic filtering and visualization in an area of interest, such as a community or region.</p>
 </div>
 <div id="image-riskprofiler" class="imageblock">
 <div class="content">
@@ -653,7 +653,7 @@ contributers.</p>
 <div class="title">Figure 3. OpenDRR RiskProfiler</div>
 </div>
 <div class="paragraph">
-<p>In it&#8217;s initial release, RiskProfiler will focus primarily on earthquake risk but the intention is to include additional natural hazard risk assessements including flood, wildfire, landslides and tsunami.</p>
+<p>In the initial release, RiskProfiler will focus primarily on earthquake risk, but the intention is to include additional natural hazard risk assessments, e.g., flood, wildfire, landslides, and tsunami.</p>
 </div>
 </div>
 </div>
@@ -666,7 +666,7 @@ contributers.</p>
 <div class="paragraph">
 <p>Source data for this project includes the National Human Settlement Layers (physical exposure and social vulnerability), the National Seismic Risk model for Canada (CanadaSRM2, probabilistic), Canada’s National Earthquake Scenario Catalogue (deterministic), and boundary geometries are stored in the Open Disaster Risk Reduction Platform (OpenDRR) organisation on GitHub.</p>
 </div>
-<div id="image-architecture" class="imageblock  text-center">
+<div id="image-architecture" class="imageblock text-center">
 <div class="content">
 <img src="img/opendrr-architecture.png" alt="OpenDRR Architecture Overview">
 </div>
@@ -686,10 +686,10 @@ contributers.</p>
 <div class="paragraph">
 <p>The stack of technologies can be configured to run on a local machine with PostgreSQL and ElasticSearch environments running locally or can be configured to communicate with cloud deployments of these services. For example, the stack can be configured to communicate simultaneously with a PostgreSQL database on Amazon Web Services (AWS) Relational Database Service (RDS) and a Containerized ElasticSearch environment on an AWS Elastic Container Service (ECS). A common use case is to run the ETL process on a local desktop or AWS Elastic Compute Cloud (EC2) with a local containerized PostgreSQL environment and a cloud deployed ElasticSearch environment which can support a public or private application programming interface (API).</p>
 </div>
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>The ETL process currently relies on a main shell script titled 'add_data.sh' which downloads the required source data files including comma separated value (csv), and GeoPackages (gpkg) into the local filesystem and performs necessary transformations to load the data into a PostgreSQL database. The script is written to be flexible enough to load any number of conformant deterministic earthquake scenarios and national seismic risk model data? and allows some flexibility in the contents of the input data as long as a minimal number of required fields are present. Once the required source data has been loaded into the database, a number of Structured Query Language (SQL) scripts help transform the data into a framework of meaningful earthquake risk indicators which in turn gets pushed to ES/Kibana ??? .</p>
 </div>
-<div class="paragraph text-justify">
+<div class="paragraph">
 <p>Discuss the postgresql database? Briefly?  Schemas?
 The PostgreSQL database is created and has PostGIS extension enabled to allow for spatial data queries.   The source datas are loaded into their respected schema names and the results are generated into their respected schemas with results_ prefix.????</p>
 </div>
@@ -702,17 +702,52 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 </div>
 <div class="sect2">
 <h3 id="_data_dissemination"><a class="anchor" href="#_data_dissemination"></a>4.2. Data Dissemination</h3>
+<div class="paragraph">
+<p>The data dissemination architecture includes API&#8217;s and applications that are designed to provide mulitple channels for access to scientific datasets and products.</p>
+</div>
 <div class="sect3">
 <h4 id="_api_stack"><a class="anchor" href="#_api_stack"></a>4.2.1. API Stack</h4>
-<div id="image-apis" class="imageblock">
+<div id="image-apis" class="imageblock right">
 <div class="content">
 <img src="img/opendrr-apis.png" alt="OpenDRR API Stack" width="400">
 </div>
 <div class="title">Figure 6. OpenDRR API Stack</div>
 </div>
+<div class="paragraph">
+<p>The API stack is comprised of three REST endpoints:</p>
+</div>
+<div class="sect4">
+<h5 id="_ogc_api_features"><a class="anchor" href="#_ogc_api_features"></a>OGC API - Features</h5>
+<div class="paragraph">
+<p>Complying with Open Geospatial Consortia <sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup> standards, it provides a geospatial data endpoint for GIS application developers. It is implemented using pygeoapi <sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup> deployed in a Docker container. Pygeoapi is connected to an Elasticsearch document store.</p>
+</div>
+<div class="paragraph">
+<p>A developer portal is provided that can be used to formulate and test queries against the API. At time writing the API supports basic querying due to the evolving nature of OGC API - Features Part 3: Filtering and the Common Query Language (CQL).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+pygoapi also provides an OGC API - Records <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup> endpoint that is being explored for future use as a metadata API.
+</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_application_stack"><a class="anchor" href="#_application_stack"></a>4.2.2. Application Stack</h4>
+<h4 id="_elasticsearch"><a class="anchor" href="#_elasticsearch"></a>4.2.2. Elasticsearch</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_esri"><a class="anchor" href="#_esri"></a>4.2.3. Esri</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_application_stack"><a class="anchor" href="#_application_stack"></a>4.2.4. Application Stack</h4>
 <div id="image-apps" class="imageblock">
 <div class="content">
 <img src="img/opendrr-apps.png" alt="OpenDRR Application Stack" width="300">
@@ -729,7 +764,7 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 <div class="sect2">
 <h3 id="_working_in_the_open"><a class="anchor" href="#_working_in_the_open"></a>5.1. Working in the Open</h3>
 <div class="paragraph">
-<p>Working in the open is standard practice in the software community, but this is not the case in the scientific community. Despite many science-based institutions promulgating FAIR<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup> and Open Science<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup>, they largely ignore the very principles upon which these are based. Instead of working in the open from the outset, science continues to be carried out behind closed doors until such time that a final product is formally published.</p>
+<p>Working in the open is standard practice in the software community, but this is not the case in the scientific community. Despite many science-based institutions promulgating FAIR<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup> and Open Science<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup>, they largely ignore the very principles upon which these are based. Instead of working in the open from the outset, science continues to be carried out behind closed doors until such time that a final product is formally published.</p>
 </div>
 <div class="paragraph">
 <p>The science-based organisation under which the OpenDRR platform is being developed decided to take a more liberal approach, open by default but closed where required. Unfortunately, internal policies regarding Open Science were not yet fully developed so the default approach was to do much of the actual science modeling and development in private repositories until peer review can be completed. An unfortunate consequence of misguided but well-intentioned policies (e.g.: NRCan&#8217;s Scientific Integrity Policy).</p>
@@ -911,10 +946,19 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 <a href="#_footnoteref_3">3</a>. <a href="https://riskprofiler.ca" class="bare">https://riskprofiler.ca</a>
 </div>
 <div class="footnote" id="_footnotedef_4">
-<a href="#_footnoteref_4">4</a>. link-to-FAIR-Principles
+<a href="#_footnoteref_4">4</a>. <a href="https://ogcapi.ogc.org/features/" class="bare">https://ogcapi.ogc.org/features/</a>
 </div>
 <div class="footnote" id="_footnotedef_5">
-<a href="#_footnoteref_5">5</a>. link-to-Open-Science
+<a href="#_footnoteref_5">5</a>. <a href="https://pygeoapi.io" class="bare">https://pygeoapi.io</a>
+</div>
+<div class="footnote" id="_footnotedef_6">
+<a href="#_footnoteref_6">6</a>. <a href="https://ogcapi.ogc.org/records/" class="bare">https://ogcapi.ogc.org/records/</a>
+</div>
+<div class="footnote" id="_footnotedef_7">
+<a href="#_footnoteref_7">7</a>. link-to-FAIR-Principles
+</div>
+<div class="footnote" id="_footnotedef_8">
+<a href="#_footnoteref_8">8</a>. link-to-Open-Science
 </div>
 </div>
 <div id="footer">
