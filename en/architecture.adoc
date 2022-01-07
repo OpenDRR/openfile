@@ -33,6 +33,12 @@ These results are aggregated at several different spatial scales, building, saui
 
 The data dissemination architecture includes API's and applications that are designed to provide mulitple channels for access to scientific datasets and products.
 
+==== GitHub
+
+OpenDRR data products are made available in Geopackage footnote:[https://www.ogc.org/standards/geopackage] (GPKG) format in their respective repositories on GitHub. Datasets can be found in release assets for each release of the product and so they are versioned to ensure that consumers  are using the most up to date data. 
+
+Checksums are also provided for each file in a dataset, so that consumers can verify the itegrity of the data, an important consideration for any data being used to support decision making.
+
 ==== API Stack
 
 [#image-apis]
@@ -45,13 +51,13 @@ The API stack is comprised of three REST endpoints:
 
 https://geo-api.riskprofiler.ca
 
-Complying with Open Geospatial Consortia footnote:[https://ogcapi.ogc.org/features/] standards, it provides a geospatial data endpoint for GIS application developers. It is implemented using pygeoapi footnote:[https://pygeoapi.io] deployed in a Docker container. Pygeoapi is connected to an Elasticsearch document store.
+Complying with Open Geospatial Consortium (OGC) footnote:[https://ogcapi.ogc.org/features/] standards, it provides a geospatial data endpoint for GIS application developers. It is implemented using pygeoapi footnote:[https://pygeoapi.io] deployed in a Docker container. Pygeoapi is connected to an Elasticsearch document store.
 
 A developer portal is provided that can be used to formulate and test queries against the API. At time writing the API supports basic querying due to the evolving nature of OGC API - Features Part 3: Filtering and the Common Query Language (CQL).
 
 NOTE: pygoapi also provides an OGC API - Records footnote:[https://ogcapi.ogc.org/records/] endpoint that is being explored for future use as a metadata API.
 
-==== Elasticsearch
+===== Elasticsearch
 
 https://api.riskprofiler.ca
 
@@ -59,6 +65,6 @@ The Elasticsearch API follows REST footnote:[https://www.ics.uci.edu/~fielding/p
 
 The Elasticsearch API provides data to the Kibana dashboard application footnote:[https://dashboard.riskprofiler.ca]. Developers can set up an account in the Kibana dashboard where query formulation and testing tools are provided.
 
-==== Esri
+===== Esri
 
 The Federal Geospatial Platform (FGP) is a Government of Canada clearing house for geospatial data. The FGP provides enterprise grade geospatial infrastructure and support services to facilitate the dissemination of data. OpenDRR datasets are hosted on the FGP and made available via Esri REST services for organisations that utilize Esri based tools and applications.
