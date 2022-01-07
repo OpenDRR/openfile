@@ -4,7 +4,7 @@
 
 Brief description of achitecture with goals/principles.
 
-Source data for this project includes the National Human Settlement Layers (physical exposure and social vulnerability), the National Seismic Risk model for Canada (CanadaSRM2, probabilistic), Canada’s National Earthquake Scenario Catalogue (deterministic), and boundary geometries are stored in the Open Disaster Risk Reduction Platform (OpenDRR) organisation on GitHub. 
+Source data for this project includes the National Human Settlement Layers (physical exposure and social vulnerability), the National Seismic Risk model for Canada (CanadaSRM2, probabilistic), Canada’s National Earthquake Scenario Catalogue (deterministic), and boundary geometries are stored in the Open Disaster Risk Reduction Platform (OpenDRR) organisation on GitHub.
 
 [#image-architecture]
 .OpenDRR Architecture Overview
@@ -43,6 +43,8 @@ The API stack is comprised of three REST endpoints:
 
 ===== OGC API - Features
 
+https://geo-api.riskprofiler.ca
+
 Complying with Open Geospatial Consortia footnote:[https://ogcapi.ogc.org/features/] standards, it provides a geospatial data endpoint for GIS application developers. It is implemented using pygeoapi footnote:[https://pygeoapi.io] deployed in a Docker container. Pygeoapi is connected to an Elasticsearch document store.
 
 A developer portal is provided that can be used to formulate and test queries against the API. At time writing the API supports basic querying due to the evolving nature of OGC API - Features Part 3: Filtering and the Common Query Language (CQL).
@@ -51,10 +53,12 @@ NOTE: pygoapi also provides an OGC API - Records footnote:[https://ogcapi.ogc.or
 
 ==== Elasticsearch
 
+https://api.riskprofiler.ca
+
+The Elasticsearch API follows REST footnote:[https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm] best practices. Configured as a read-only (i.e.: HTTP GET verb) it allows for access to datasets and their properties. Using a proprietary query syntax, developers can issue queries to return summary statistics, geospatial features, and feature properties.
+
+The Elasticsearch API provides data to the Kibana dashboard application footnote:[https://dashboard.riskprofiler.ca]. Developers can set up an account in the Kibana dashboard where query formulation and testing tools are provided.
+
 ==== Esri
 
-==== Application Stack
-
-[#image-apps]
-.OpenDRR Application Stack
-image::opendrr-apps.png[OpenDRR Application Stack, 300]
+The Federal Geospatial Platform (FGP) is a Government of Canada clearing house for geospatial data. The FGP provides enterprise grade geospatial infrastructure and support services to facilitate the dissemination of data. OpenDRR datasets are hosted on the FGP and made available via Esri REST services for organisations that utilize Esri based tools and applications.
