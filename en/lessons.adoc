@@ -1,26 +1,22 @@
 == Lessons Learned
-// draft: very early brainstorming; by no means complete
 
 === Working in the Open
 
-Working in the open is standard practice in the software community, but this is not the case in the scientific community. Despite many science-based institutions promulgating FAIRfootnote:[link-to-FAIR-Principles] and Open Sciencefootnote:[link-to-Open-Science], they largely ignore the very principles upon which these are based. Instead of working in the open from the outset, science continues to be carried out behind closed doors until such time that a final product is formally published.
+Working in the open is standard practice in the software community, but this is not the case in the scientific community. Despite many science-based institutions promulgating FAIR footnote:[https://www.go-fair.org/fair-principles/] and Open Science footnote:[https://science.gc.ca/eic/site/063.nsf/eng/h_97992.html], they largely ignore the very principles upon which these are based. Instead of working in the open from the outset, science continues to be carried out behind closed doors until such time that a final product is formally published.
 
-The science-based organisation under which the OpenDRR platform is being developed decided to take a more liberal approach, open by default but closed where required. Unfortunately, internal policies regarding Open Science were not yet fully developed so the default approach was to do much of the actual science modeling and development in private repositories until peer review can be completed. An unfortunate consequence of misguided but well-intentioned policies (e.g.: NRCan's Scientific Integrity Policy).
+The science-based organisation under which the OpenDRR platform is being developed decided to take a more liberal approach, open by default but closed where required. Unfortunately, internal policies regarding Open Science were not yet fully developed, so the default approach was to do much of the actual science modeling and development in private repositories until peer review can be completed. An unfortunate consequence of misguided but well-intentioned policies (e.g.: NRCan's Scientific Integrity Policy).
 
 While not ideal, the platform did demonstrate that peer-review of science using GitHub was tractable. Transparency in the science that informs government policy is an important part of any democracy, and so the platform will continue to aspire towards a future where policy-driven decisions are supported by data that is aligned with the principles of FAIR and Open Science.
 
-* (May seem scary at first?) but many benefits
-* full openness, transparency, accountability
-* GitHub platform offers a lot of features and flexibility that we need
-* Industry best practices
-
-* Mutually beneficial relationship with GEM (OpenQuake)
-* pygeoapi
-* etc.
-
 === Continuous Integration
 
-Usage of CI (e.g.: GitHub Actions) to generate release assets, do QA, and run data processing scripts.
+Usage of CI (e.g. GitHub Actions) to generate release assets, do QA, and run data processing scripts.
+
+* generate release assets
+* translate README files
+* generate and add add release assets
+* run tests
+* generate metadata
 
 === Security
 
@@ -35,15 +31,16 @@ Built-in features in GitHub helped to ensure that code was secure and up to date
 
 === The Software Development Lifecycle
 
-Agile works for software but not so well with science!
+The intersection of science delivery and software development has traditionally been carried out indpendent of each other, that is the science is completed and then the system is developed. With a very ambitious delivery schedule it was decided to do both in parallel.
 
-=== Github restrictions on file size
+The Pathways OpenDRR development utilized the scrum process with two-week iterations. Tasks were assigned to each iteration and reported on every two weeks. The complexity of the products being developed necessitated a tight coupling of the raw science outputs with custom software and continuous integration processes. 
 
-The file size restrictions imposed by the GitHub platform were an issue for some repositories. 
+This tight coupling presented a number of challenges. Firstly, it was immediately apparent that a high degree of flexibility would need to be designed into the software to accommodate constantly changing data schemas. Secondly, the development of the science outputs moved at a much slower pace as it required collaboration with other scientists (e.g.: peer reviews). The two week interation cycle resulted in too much overhead on the development of the science outputs, and as a consequence engagement with the science staff suffered.
 
+=== Github
 
-=== [optional] opendrr.github.io got falsely flagged as phishing or malicious
+The use of GitHub as a platform for the development of the science outputs was well recieved and uptake was high. The core concepts of Git were well understood and the distributed nature of the platform proved to be a benefit during the COVID 19 pandemic, which saw most project participants working remotely, often disconnected from the enterprise network. Fine grained control over access to repositories and associated assets was a critical factor in the success of the platform to support Open Science.
 
-* CIRA, Google, VirusTotal; took a while to get off e.g. Microsoft SmartScreen
-* Possibly due to the use of non Canada.ca template on a non .ca domain?
-* https://github.com/OpenDRR/opendrr/issues/122
+The 100MB file size restriction imposed by the GitHub platform was an issue for some repositories. Thankfully, GitHub provides an alternative storage called "Git Large File Storage" (Git LFS) which was enabled on many repositories. Bandwidth quotas for Git LFS were exceeded. GitHub provides 1GB of free storage and 1GB per month of free bandwidth. Additional costs were incurred to increase the quotas.
+
+To mitigate the potential of increasing costs for managing large files a strategy of including datasets and files in the realease assets of a repository was adopted. GitHub allows for release assets (e.g.: files, datasets) up to 2GB to be stored and disseminated at no cost.
