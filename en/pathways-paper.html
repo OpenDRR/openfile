@@ -471,8 +471,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_continuous_integration">5.2. Continuous Integration</a></li>
 <li><a href="#_security">5.3. Security</a></li>
 <li><a href="#_the_software_development_lifecycle">5.4. The Software Development Lifecycle</a></li>
-<li><a href="#_github_restrictions_on_file_size">5.5. Github restrictions on file size</a></li>
-<li><a href="#_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious">5.6. [optional] opendrr.github.io got falsely flagged as phishing or malicious</a></li>
+<li><a href="#_github_2">5.5. Github</a></li>
 </ul>
 </li>
 <li><a href="#_future_development">6. Future Development</a>
@@ -627,7 +626,7 @@ contributors.</p>
 </div>
 <div id="image-github" class="imageblock">
 <div class="content">
-<img src="img/opendrr-github-en.png" alt="OpenDRR GitHub">
+<img src="img/opendrr-GitHub-en.png" alt="OpenDRR GitHub">
 </div>
 <div class="title">Figure 1. OpenDRR GitHub</div>
 </div>
@@ -706,7 +705,16 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 <p>The data dissemination architecture includes API&#8217;s and applications that are designed to provide mulitple channels for access to scientific datasets and products.</p>
 </div>
 <div class="sect3">
-<h4 id="_api_stack"><a class="anchor" href="#_api_stack"></a>4.2.1. API Stack</h4>
+<h4 id="_github"><a class="anchor" href="#_github"></a>4.2.1. GitHub</h4>
+<div class="paragraph">
+<p>OpenDRR data products are made available in Geopackage <sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup> (GPKG) format in their respective repositories on GitHub. Datasets can be found in release assets for each release of the product and so they are versioned to ensure that consumers  are using the most up to date data.</p>
+</div>
+<div class="paragraph">
+<p>Checksums are also provided for each file in a dataset, so that consumers can verify the itegrity of the data, an important consideration for any data being used to support decision making.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_api_stack"><a class="anchor" href="#_api_stack"></a>4.2.2. API Stack</h4>
 <div id="image-apis" class="imageblock right">
 <div class="content">
 <img src="img/opendrr-apis.png" alt="OpenDRR API Stack" width="400">
@@ -719,7 +727,10 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 <div class="sect4">
 <h5 id="_ogc_api_features"><a class="anchor" href="#_ogc_api_features"></a>OGC API - Features</h5>
 <div class="paragraph">
-<p>Complying with Open Geospatial Consortia <sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup> standards, it provides a geospatial data endpoint for GIS application developers. It is implemented using pygeoapi <sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup> deployed in a Docker container. Pygeoapi is connected to an Elasticsearch document store.</p>
+<p><a href="https://geo-api.riskprofiler.ca" class="bare">https://geo-api.riskprofiler.ca</a></p>
+</div>
+<div class="paragraph">
+<p>Complying with Open Geospatial Consortium (OGC) <sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup> standards, it provides a geospatial data endpoint for GIS application developers. It is implemented using pygeoapi <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup> deployed in a Docker container. Pygeoapi is connected to an Elasticsearch document store.</p>
 </div>
 <div class="paragraph">
 <p>A developer portal is provided that can be used to formulate and test queries against the API. At time writing the API supports basic querying due to the evolving nature of OGC API - Features Part 3: Filtering and the Common Query Language (CQL).</p>
@@ -731,28 +742,29 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 <div class="title">Note</div>
 </td>
 <td class="content">
-pygoapi also provides an OGC API - Records <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup> endpoint that is being explored for future use as a metadata API.
+pygoapi also provides an OGC API - Records <sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup> endpoint that is being explored for future use as a metadata API.
 </td>
 </tr>
 </table>
 </div>
 </div>
+<div class="sect4">
+<h5 id="_elasticsearch"><a class="anchor" href="#_elasticsearch"></a>Elasticsearch</h5>
+<div class="paragraph">
+<p><a href="https://api.riskprofiler.ca" class="bare">https://api.riskprofiler.ca</a></p>
 </div>
-<div class="sect3">
-<h4 id="_elasticsearch"><a class="anchor" href="#_elasticsearch"></a>4.2.2. Elasticsearch</h4>
-
+<div class="paragraph">
+<p>The Elasticsearch API follows REST <sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup> best practices. Configured as a read-only (i.e.: HTTP GET verb) it allows for access to datasets and their properties. Using a proprietary query syntax, developers can issue queries to return summary statistics, geospatial features, and feature properties.</p>
 </div>
-<div class="sect3">
-<h4 id="_esri"><a class="anchor" href="#_esri"></a>4.2.3. Esri</h4>
-
+<div class="paragraph">
+<p>The Elasticsearch API provides data to the Kibana dashboard application <sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup>. Developers can set up an account in the Kibana dashboard where query formulation and testing tools are provided.</p>
 </div>
-<div class="sect3">
-<h4 id="_application_stack"><a class="anchor" href="#_application_stack"></a>4.2.4. Application Stack</h4>
-<div id="image-apps" class="imageblock">
-<div class="content">
-<img src="img/opendrr-apps.png" alt="OpenDRR Application Stack" width="300">
 </div>
-<div class="title">Figure 7. OpenDRR Application Stack</div>
+<div class="sect4">
+<h5 id="_esri"><a class="anchor" href="#_esri"></a>Esri</h5>
+<div class="paragraph">
+<p>The Federal Geospatial Platform (FGP) is a Government of Canada clearing house for geospatial data. The FGP provides enterprise grade geospatial infrastructure and support services to facilitate the dissemination of data. OpenDRR datasets are hosted on the FGP and made available via Esri REST services for organisations that utilize Esri based tools and applications.</p>
+</div>
 </div>
 </div>
 </div>
@@ -764,44 +776,38 @@ pygoapi also provides an OGC API - Records <sup class="footnote">[<a id="_footno
 <div class="sect2">
 <h3 id="_working_in_the_open"><a class="anchor" href="#_working_in_the_open"></a>5.1. Working in the Open</h3>
 <div class="paragraph">
-<p>Working in the open is standard practice in the software community, but this is not the case in the scientific community. Despite many science-based institutions promulgating FAIR<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup> and Open Science<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup>, they largely ignore the very principles upon which these are based. Instead of working in the open from the outset, science continues to be carried out behind closed doors until such time that a final product is formally published.</p>
+<p>Working in the open is standard practice in the software community, but this is not the case in the scientific community. Despite many science-based institutions promulgating FAIR <sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup> and Open Science <sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup>, they largely ignore the very principles upon which these are based. Instead of working in the open from the outset, science continues to be carried out behind closed doors until such time that a final product is formally published.</p>
 </div>
 <div class="paragraph">
-<p>The science-based organisation under which the OpenDRR platform is being developed decided to take a more liberal approach, open by default but closed where required. Unfortunately, internal policies regarding Open Science were not yet fully developed so the default approach was to do much of the actual science modeling and development in private repositories until peer review can be completed. An unfortunate consequence of misguided but well-intentioned policies (e.g.: NRCan&#8217;s Scientific Integrity Policy).</p>
+<p>The science-based organisation under which the OpenDRR platform is being developed decided to take a more liberal approach, open by default but closed where required. Unfortunately, internal policies regarding Open Science were not yet fully developed, so the default approach was to do much of the actual science modeling and development in private repositories until peer review can be completed. An unfortunate consequence of misguided but well-intentioned policies (e.g.: NRCan&#8217;s Scientific Integrity Policy).</p>
 </div>
 <div class="paragraph">
 <p>While not ideal, the platform did demonstrate that peer-review of science using GitHub was tractable. Transparency in the science that informs government policy is an important part of any democracy, and so the platform will continue to aspire towards a future where policy-driven decisions are supported by data that is aligned with the principles of FAIR and Open Science.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>(May seem scary at first?) but many benefits</p>
-</li>
-<li>
-<p>full openness, transparency, accountability</p>
-</li>
-<li>
-<p>GitHub platform offers a lot of features and flexibility that we need</p>
-</li>
-<li>
-<p>Industry best practices</p>
-</li>
-<li>
-<p>Mutually beneficial relationship with GEM (OpenQuake)</p>
-</li>
-<li>
-<p>pygeoapi</p>
-</li>
-<li>
-<p>etc.</p>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_continuous_integration"><a class="anchor" href="#_continuous_integration"></a>5.2. Continuous Integration</h3>
 <div class="paragraph">
-<p>Usage of CI (e.g.: GitHub Actions) to generate release assets, do QA, and run data processing scripts.</p>
+<p>Usage of CI (e.g. GitHub Actions) to generate release assets, do QA, and run data processing scripts.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>generate release assets</p>
+</li>
+<li>
+<p>translate README files</p>
+</li>
+<li>
+<p>generate and add add release assets</p>
+</li>
+<li>
+<p>run tests</p>
+</li>
+<li>
+<p>generate metadata</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
@@ -833,29 +839,25 @@ pygoapi also provides an OGC API - Records <sup class="footnote">[<a id="_footno
 <div class="sect2">
 <h3 id="_the_software_development_lifecycle"><a class="anchor" href="#_the_software_development_lifecycle"></a>5.4. The Software Development Lifecycle</h3>
 <div class="paragraph">
-<p>Agile works for software but not so well with science!</p>
+<p>The intersection of science delivery and software development has traditionally been carried out indpendent of each other, that is the science is completed and then the system is developed. With a very ambitious delivery schedule it was decided to do both in parallel.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_github_restrictions_on_file_size"><a class="anchor" href="#_github_restrictions_on_file_size"></a>5.5. Github restrictions on file size</h3>
 <div class="paragraph">
-<p>The file size restrictions imposed by the GitHub platform were an issue for some repositories.</p>
+<p>The Pathways OpenDRR development utilized the scrum process with two-week iterations. Tasks were assigned to each iteration and reported on every two weeks. The complexity of the products being developed necessitated a tight coupling of the raw science outputs with custom software and continuous integration processes.</p>
+</div>
+<div class="paragraph">
+<p>This tight coupling presented a number of challenges. Firstly, it was immediately apparent that a high degree of flexibility would need to be designed into the software to accommodate constantly changing data schemas. Secondly, the development of the science outputs moved at a much slower pace as it required collaboration with other scientists (e.g.: peer reviews). The two week interation cycle resulted in too much overhead on the development of the science outputs, and as a consequence engagement with the science staff suffered.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious"><a class="anchor" href="#_optional_opendrr_github_io_got_falsely_flagged_as_phishing_or_malicious"></a>5.6. [optional] opendrr.github.io got falsely flagged as phishing or malicious</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>CIRA, Google, VirusTotal; took a while to get off e.g. Microsoft SmartScreen</p>
-</li>
-<li>
-<p>Possibly due to the use of non Canada.ca template on a non .ca domain?</p>
-</li>
-<li>
-<p><a href="https://github.com/OpenDRR/opendrr/issues/122" class="bare">https://github.com/OpenDRR/opendrr/issues/122</a></p>
-</li>
-</ul>
+<h3 id="_github_2"><a class="anchor" href="#_github_2"></a>5.5. Github</h3>
+<div class="paragraph">
+<p>The use of GitHub as a platform for the development of the science outputs was well recieved and uptake was high. The core concepts of Git were well understood and the distributed nature of the platform proved to be a benefit during the COVID 19 pandemic, which saw most project participants working remotely, often disconnected from the enterprise network. Fine grained control over access to repositories and associated assets was a critical factor in the success of the platform to support Open Science.</p>
+</div>
+<div class="paragraph">
+<p>The 100MB file size restriction imposed by the GitHub platform was an issue for some repositories. Thankfully, GitHub provides an alternative storage called "Git Large File Storage" (Git LFS) which was enabled on many repositories. Bandwidth quotas for Git LFS were exceeded. GitHub provides 1GB of free storage and 1GB per month of free bandwidth. Additional costs were incurred to increase the quotas.</p>
+</div>
+<div class="paragraph">
+<p>To mitigate the potential of increasing costs for managing large files a strategy of including datasets and files in the realease assets of a repository was adopted. GitHub allows for release assets (e.g.: files, datasets) up to 2GB to be stored and disseminated at no cost.</p>
 </div>
 </div>
 </div>
@@ -946,19 +948,28 @@ pygoapi also provides an OGC API - Records <sup class="footnote">[<a id="_footno
 <a href="#_footnoteref_3">3</a>. <a href="https://riskprofiler.ca" class="bare">https://riskprofiler.ca</a>
 </div>
 <div class="footnote" id="_footnotedef_4">
-<a href="#_footnoteref_4">4</a>. <a href="https://ogcapi.ogc.org/features/" class="bare">https://ogcapi.ogc.org/features/</a>
+<a href="#_footnoteref_4">4</a>. <a href="https://www.ogc.org/standards/geopackage" class="bare">https://www.ogc.org/standards/geopackage</a>
 </div>
 <div class="footnote" id="_footnotedef_5">
-<a href="#_footnoteref_5">5</a>. <a href="https://pygeoapi.io" class="bare">https://pygeoapi.io</a>
+<a href="#_footnoteref_5">5</a>. <a href="https://ogcapi.ogc.org/features/" class="bare">https://ogcapi.ogc.org/features/</a>
 </div>
 <div class="footnote" id="_footnotedef_6">
-<a href="#_footnoteref_6">6</a>. <a href="https://ogcapi.ogc.org/records/" class="bare">https://ogcapi.ogc.org/records/</a>
+<a href="#_footnoteref_6">6</a>. <a href="https://pygeoapi.io" class="bare">https://pygeoapi.io</a>
 </div>
 <div class="footnote" id="_footnotedef_7">
-<a href="#_footnoteref_7">7</a>. link-to-FAIR-Principles
+<a href="#_footnoteref_7">7</a>. <a href="https://ogcapi.ogc.org/records/" class="bare">https://ogcapi.ogc.org/records/</a>
 </div>
 <div class="footnote" id="_footnotedef_8">
-<a href="#_footnoteref_8">8</a>. link-to-Open-Science
+<a href="#_footnoteref_8">8</a>. <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm" class="bare">https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm</a>
+</div>
+<div class="footnote" id="_footnotedef_9">
+<a href="#_footnoteref_9">9</a>. <a href="https://dashboard.riskprofiler.ca" class="bare">https://dashboard.riskprofiler.ca</a>
+</div>
+<div class="footnote" id="_footnotedef_10">
+<a href="#_footnoteref_10">10</a>. <a href="https://www.go-fair.org/fair-principles/" class="bare">https://www.go-fair.org/fair-principles/</a>
+</div>
+<div class="footnote" id="_footnotedef_11">
+<a href="#_footnoteref_11">11</a>. <a href="https://science.gc.ca/eic/site/063.nsf/eng/h_97992.html" class="bare">https://science.gc.ca/eic/site/063.nsf/eng/h_97992.html</a>
 </div>
 </div>
 <div id="footer">
