@@ -1,28 +1,28 @@
 == Future Development
 // draft: very early brainstorming; by no means complete
 
-=== Risk Profiler (v1)
+=== Additional natural hazard types
 
-* Expected to be published before April 2022 (kudos to https://habitatseven.com/[HabitatSeven])
+The initial requirement focused on earthquake risk with a desire to include other natural hazard types (e.g. landslides, wildfires, flooding, tsunami). Due to time and resource constraints the decision was made to focus on earthquake risk and bring in additional hazards when the platform was more mature.
 
-=== Increase in scope: Import and process other datasets besides earthquake
+There are a number of ways in which additional hazards can be added. They can be integrated fully or partially depending on the nature of the data and the capacity of the responsible party. For example, at the the most basic level a repository could be set up for each hazard type and the datasets, stored as release assets, could be easily propogated to the dissemination infrasctucure by way of existing processes. More advanced approach would be to generate the datasets from within the platform as it currently done for Earthquakes. The later approach would require a fair amount of scripting (e.g. Python, Shell) to achieve, but not impossible.
 
-* Flood: https://github.com/NRCan/CanFlood (Open-source flood risk modelling toolbox)
-* Wildfire
-* Mudslides
+The RiskProfiler web application is being developed in such a way that it could be extended to include other natural hazard types.
 
-=== Continued automation, optimization, etc.
+=== Continued automation, optimization, etc. [could be duplicative with 5.2 - Joost]
 
 * Increased use of GitHub Actions workflows
 * Full CI (Continuous Integration, Continuous Delivery)
 * Cost-savings (e.g. move off Git LFS wherever possible; cheaper alternatives...)
-* More automated testing, to catch errors as early as possible (preferrably at the pull request stage)
-* Test-driven development (TDD) / Bahaviour driven development (BDD)?
+* More automated testing, to catch errors as early as possible (preferably at the pull request stage)
+* Test-driven development (TDD) / Behaviour driven development (BDD)?
 
-=== Promote the project
+=== Promote the project [consider removing - Joost]
 
 * as a model with example that that other groups (countries/governments/companies etc.) can use
 * (as open-source project) invite participation from open-source, scientific community, and the general public
 * through web site(s), seminars/talks, publications
 
-=== More...
+=== Engagement
+
+To engage the public more effectively and efficiently respond to queries about the science, the project will leverage the Discussions module in GitHub. The Discussions module can support FAQ's, general discussions, collection of feedback, or any other type of engagement. Typically, the primary researcher would have to respond to queries on an ad hoc basis, a time-consuming but necessary task. The Discussions module could reduce the level of effort to support science hosted in repositories.
