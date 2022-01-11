@@ -476,11 +476,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_future_development">6. Future Development</a>
 <ul class="sectlevel2">
-<li><a href="#_risk_profiler_v1">6.1. Risk Profiler (v1)</a></li>
-<li><a href="#_increase_in_scope_import_and_process_other_datasets_besides_earthquake">6.2. Increase in scope: Import and process other datasets besides earthquake</a></li>
-<li><a href="#_continued_automation_optimization_etc">6.3. Continued automation, optimization, etc.</a></li>
-<li><a href="#_promote_the_project">6.4. Promote the project</a></li>
-<li><a href="#_more">6.5. More&#8230;&#8203;</a></li>
+<li><a href="#_additional_natural_hazard_types">6.1. Additional natural hazard types</a></li>
+<li><a href="#_continued_automation_optimization_etc_could_be_duplicative_with_5_2_joost">6.2. Continued automation, optimization, etc. [could be duplicative with 5.2 - Joost]</a></li>
+<li><a href="#_promote_the_project_consider_removing_joost">6.3. Promote the project [consider removing - Joost]</a></li>
+<li><a href="#_engagement">6.4. Engagement</a></li>
 </ul>
 </li>
 </ul>
@@ -626,7 +625,7 @@ contributors.</p>
 </div>
 <div id="image-github" class="imageblock">
 <div class="content">
-<img src="img/opendrr-GitHub-en.png" alt="OpenDRR GitHub">
+<img src="img/opendrr-github-en.png" alt="OpenDRR GitHub">
 </div>
 <div class="title">Figure 1. OpenDRR GitHub</div>
 </div>
@@ -696,21 +695,21 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 <p>Results are calculated and/or aggregated at different spatial scales dependent on the data.  For National Human Settlement Layers the results are in settled areas.  The probabilistic and deterministic data are calculated at the building level and aggregated up to the settled area and census subdivision levels.</p>
 </div>
 <div class="paragraph">
-<p>These results are aggregated at several different spatial scales, building, sauid, and csd level. The building level is the finest spatial resolution and aggregates all buildings of simmilar construction type for a given neighborhood. The Sauid level of aggregation groups all building types across the whole neighbourhood polygon. The Census Sub-divison (CSD) aggregation is a coarse aggregation of all assets within a given CSD as defined by Statistics Canada.</p>
+<p>These results are aggregated at several different spatial scales, building, sauid, and csd level. The building level is the finest spatial resolution and aggregates all buildings of similar construction type for a given neighbourhood. The Sauid level of aggregation groups all building types across the whole neighbourhood polygon. The Census Sub-division (CSD) aggregation is a coarse aggregation of all assets within a given CSD as defined by Statistics Canada.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_data_dissemination"><a class="anchor" href="#_data_dissemination"></a>4.2. Data Dissemination</h3>
 <div class="paragraph">
-<p>The data dissemination architecture includes API&#8217;s and applications that are designed to provide mulitple channels for access to scientific datasets and products.</p>
+<p>The data dissemination architecture includes API&#8217;s and applications that are designed to provide multiple channels for access to scientific datasets and products.</p>
 </div>
 <div class="sect3">
 <h4 id="_github"><a class="anchor" href="#_github"></a>4.2.1. GitHub</h4>
 <div class="paragraph">
-<p>OpenDRR data products are made available in Geopackage <sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup> (GPKG) format in their respective repositories on GitHub. Datasets can be found in release assets for each release of the product and so they are versioned to ensure that consumers  are using the most up to date data.</p>
+<p>OpenDRR data products are made available in Geopackage <sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup> (GPKG) format in their respective repositories on GitHub. Datasets can be found in release assets for each release of the product and so they are versioned to ensure that consumers are using the most up-to-date data.</p>
 </div>
 <div class="paragraph">
-<p>Checksums are also provided for each file in a dataset, so that consumers can verify the itegrity of the data, an important consideration for any data being used to support decision making.</p>
+<p>Checksums are also provided for each file in a dataset so that consumers can verify the integrity of the data, an important consideration for any data being used to support decision making.</p>
 </div>
 </div>
 <div class="sect3">
@@ -733,7 +732,7 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 <p>Complying with Open Geospatial Consortium (OGC) <sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup> standards, it provides a geospatial data endpoint for GIS application developers. It is implemented using pygeoapi <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup> deployed in a Docker container. Pygeoapi is connected to an Elasticsearch document store.</p>
 </div>
 <div class="paragraph">
-<p>A developer portal is provided that can be used to formulate and test queries against the API. At time writing the API supports basic querying due to the evolving nature of OGC API - Features Part 3: Filtering and the Common Query Language (CQL).</p>
+<p>A developer portal is provided that can be used to formulate and test queries against the API. At the time writing the API supports basic querying due to the evolving nature of OGC API - Features Part 3: Filtering and the Common Query Language (CQL).</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -763,8 +762,48 @@ pygoapi also provides an OGC API - Records <sup class="footnote">[<a id="_footno
 <div class="sect4">
 <h5 id="_esri"><a class="anchor" href="#_esri"></a>Esri</h5>
 <div class="paragraph">
-<p>The Federal Geospatial Platform (FGP) is a Government of Canada clearing house for geospatial data. The FGP provides enterprise grade geospatial infrastructure and support services to facilitate the dissemination of data. OpenDRR datasets are hosted on the FGP and made available via Esri REST services for organisations that utilize Esri based tools and applications.</p>
+<p>The Federal Geospatial Platform (FGP) is a Government of Canada clearinghouse for geospatial data. The FGP provides enterprise-grade geospatial infrastructure and support services to facilitate the dissemination of data. OpenDRR datasets are hosted on the FGP and made available via Esri REST services for organizations that utilize Esri based tools and applications.</p>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_riskprofiler"><a class="anchor" href="#_riskprofiler"></a>4.2.3. RiskProfiler</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>wordpress static site</p>
+</li>
+<li>
+<p>utilizes API&#8217;s</p>
+</li>
+<li>
+<p>user profiles: emergency planner, risk manager</p>
+</li>
+<li>
+<p>browse by region of interest</p>
+</li>
+<li>
+<p>Deterministic and probabilistic models</p>
+</li>
+<li>
+<p>downloads</p>
+</li>
+<li>
+<p>training</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kibana_dashboard"><a class="anchor" href="#_kibana_dashboard"></a>4.2.4. Kibana Dashboard</h4>
+<div class="paragraph">
+<p>The Kibana <sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup> Dashboard is intended to support a more sophisticated use case than that of RiskProfiler. Initially, it was imagined that RiskProfiler would serve all stakeholders however, after engaging with the risk community <sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup>, it was evident that a dashboarding application would be well received.</p>
+</div>
+<div class="paragraph">
+<p>The Dashboard allows users to create workspaces where they can collaborate with others on data visualizations and reports. The entirety of available data in OpenDRR is available to Dashboard users. These data are hosted in Elasticsearch and it is therefore identical with what is available via the Elasticsearch API. Users can add or link additional datasets to "mash-up" Pathways data with their own.</p>
+</div>
+<div class="paragraph">
+<p>Users can create reports, data visualizations, and maps for an area of interest. Visualizations can be exported and embedded in presentations and websites. This is the first of such platform to be made available to the Public with national scale risk data.</p>
 </div>
 </div>
 </div>
@@ -776,7 +815,7 @@ pygoapi also provides an OGC API - Records <sup class="footnote">[<a id="_footno
 <div class="sect2">
 <h3 id="_working_in_the_open"><a class="anchor" href="#_working_in_the_open"></a>5.1. Working in the Open</h3>
 <div class="paragraph">
-<p>Working in the open is standard practice in the software community, but this is not the case in the scientific community. Despite many science-based institutions promulgating FAIR <sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup> and Open Science <sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup>, they largely ignore the very principles upon which these are based. Instead of working in the open from the outset, science continues to be carried out behind closed doors until such time that a final product is formally published.</p>
+<p>Working in the open is standard practice in the software community, but this is not the case in the scientific community. Despite many science-based institutions promulgating FAIR <sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup> and Open Science <sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup>, they largely ignore the very principles upon which these are based. Instead of working in the open from the outset, science continues to be carried out behind closed doors until such time that a final product is formally published.</p>
 </div>
 <div class="paragraph">
 <p>The science-based organisation under which the OpenDRR platform is being developed decided to take a more liberal approach, open by default but closed where required. Unfortunately, internal policies regarding Open Science were not yet fully developed, so the default approach was to do much of the actual science modeling and development in private repositories until peer review can be completed. An unfortunate consequence of misguided but well-intentioned policies (e.g.: NRCan&#8217;s Scientific Integrity Policy).</p>
@@ -866,33 +905,19 @@ pygoapi also provides an OGC API - Records <sup class="footnote">[<a id="_footno
 <h2 id="_future_development"><a class="anchor" href="#_future_development"></a>6. Future Development</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_risk_profiler_v1"><a class="anchor" href="#_risk_profiler_v1"></a>6.1. Risk Profiler (v1)</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Expected to be published before April 2022 (kudos to <a href="https://habitatseven.com/">HabitatSeven</a>)</p>
-</li>
-</ul>
+<h3 id="_additional_natural_hazard_types"><a class="anchor" href="#_additional_natural_hazard_types"></a>6.1. Additional natural hazard types</h3>
+<div class="paragraph">
+<p>The initial requirement focused on earthquake risk with a desire to include other natural hazard types (e.g. landslides, wildfires, flooding, tsunami). Due to time and resource constraints the decision was made to focus on earthquake risk and bring in additional hazards when the platform was more mature.</p>
+</div>
+<div class="paragraph">
+<p>There are a number of ways in which additional hazards can be added. They can be integrated fully or partially depending on the nature of the data and the capacity of the responsible party. For example, at the the most basic level a repository could be set up for each hazard type and the datasets, stored as release assets, could be easily propogated to the dissemination infrasctucure by way of existing processes. More advanced approach would be to generate the datasets from within the platform as it currently done for Earthquakes. The later approach would require a fair amount of scripting (e.g. Python, Shell) to achieve, but not impossible.</p>
+</div>
+<div class="paragraph">
+<p>The RiskProfiler web application is being developed in such a way that it could be extended to include other natural hazard types.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_increase_in_scope_import_and_process_other_datasets_besides_earthquake"><a class="anchor" href="#_increase_in_scope_import_and_process_other_datasets_besides_earthquake"></a>6.2. Increase in scope: Import and process other datasets besides earthquake</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Flood: <a href="https://github.com/NRCan/CanFlood" class="bare">https://github.com/NRCan/CanFlood</a> (Open-source flood risk modelling toolbox)</p>
-</li>
-<li>
-<p>Wildfire</p>
-</li>
-<li>
-<p>Mudslides</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_continued_automation_optimization_etc"><a class="anchor" href="#_continued_automation_optimization_etc"></a>6.3. Continued automation, optimization, etc.</h3>
+<h3 id="_continued_automation_optimization_etc_could_be_duplicative_with_5_2_joost"><a class="anchor" href="#_continued_automation_optimization_etc_could_be_duplicative_with_5_2_joost"></a>6.2. Continued automation, optimization, etc. [could be duplicative with 5.2 - Joost]</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -905,16 +930,16 @@ pygoapi also provides an OGC API - Records <sup class="footnote">[<a id="_footno
 <p>Cost-savings (e.g. move off Git LFS wherever possible; cheaper alternatives&#8230;&#8203;)</p>
 </li>
 <li>
-<p>More automated testing, to catch errors as early as possible (preferrably at the pull request stage)</p>
+<p>More automated testing, to catch errors as early as possible (preferably at the pull request stage)</p>
 </li>
 <li>
-<p>Test-driven development (TDD) / Bahaviour driven development (BDD)?</p>
+<p>Test-driven development (TDD) / Behaviour driven development (BDD)?</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_promote_the_project"><a class="anchor" href="#_promote_the_project"></a>6.4. Promote the project</h3>
+<h3 id="_promote_the_project_consider_removing_joost"><a class="anchor" href="#_promote_the_project_consider_removing_joost"></a>6.3. Promote the project [consider removing - Joost]</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -930,8 +955,10 @@ pygoapi also provides an OGC API - Records <sup class="footnote">[<a id="_footno
 </div>
 </div>
 <div class="sect2">
-<h3 id="_more"><a class="anchor" href="#_more"></a>6.5. More&#8230;&#8203;</h3>
-
+<h3 id="_engagement"><a class="anchor" href="#_engagement"></a>6.4. Engagement</h3>
+<div class="paragraph">
+<p>To engage the public more effectively and efficiently respond to queries about the science, the project will leverage the Discussions module in GitHub. The Discussions module can support FAQ&#8217;s, general discussions, collection of feedback, or any other type of engagement. Typically, the primary researcher would have to respond to queries on an ad hoc basis, a time-consuming but necessary task. The Discussions module could reduce the level of effort to support science hosted in repositories.</p>
+</div>
 </div>
 </div>
 </div>
@@ -966,10 +993,16 @@ pygoapi also provides an OGC API - Records <sup class="footnote">[<a id="_footno
 <a href="#_footnoteref_9">9</a>. <a href="https://dashboard.riskprofiler.ca" class="bare">https://dashboard.riskprofiler.ca</a>
 </div>
 <div class="footnote" id="_footnotedef_10">
-<a href="#_footnoteref_10">10</a>. <a href="https://www.go-fair.org/fair-principles/" class="bare">https://www.go-fair.org/fair-principles/</a>
+<a href="#_footnoteref_10">10</a>. <a href="https://www.elastic.co/kibana/" class="bare">https://www.elastic.co/kibana/</a>
 </div>
 <div class="footnote" id="_footnotedef_11">
-<a href="#_footnoteref_11">11</a>. <a href="https://science.gc.ca/eic/site/063.nsf/eng/h_97992.html" class="bare">https://science.gc.ca/eic/site/063.nsf/eng/h_97992.html</a>
+<a href="#_footnoteref_11">11</a>. URBC 2020
+</div>
+<div class="footnote" id="_footnotedef_12">
+<a href="#_footnoteref_12">12</a>. <a href="https://www.go-fair.org/fair-principles/" class="bare">https://www.go-fair.org/fair-principles/</a>
+</div>
+<div class="footnote" id="_footnotedef_13">
+<a href="#_footnoteref_13">13</a>. <a href="https://science.gc.ca/eic/site/063.nsf/eng/h_97992.html" class="bare">https://science.gc.ca/eic/site/063.nsf/eng/h_97992.html</a>
 </div>
 </div>
 <div id="footer">
