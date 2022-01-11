@@ -27,17 +27,17 @@ The PostgreSQL database is created and has PostGIS extension enabled to allow fo
 
 Results are calculated and/or aggregated at different spatial scales dependent on the data.  For National Human Settlement Layers the results are in settled areas.  The probabilistic and deterministic data are calculated at the building level and aggregated up to the settled area and census subdivision levels.
 
-These results are aggregated at several different spatial scales, building, sauid, and csd level. The building level is the finest spatial resolution and aggregates all buildings of simmilar construction type for a given neighborhood. The Sauid level of aggregation groups all building types across the whole neighbourhood polygon. The Census Sub-divison (CSD) aggregation is a coarse aggregation of all assets within a given CSD as defined by Statistics Canada. 
+These results are aggregated at several different spatial scales, building, sauid, and csd level. The building level is the finest spatial resolution and aggregates all buildings of similar construction type for a given neighbourhood. The Sauid level of aggregation groups all building types across the whole neighbourhood polygon. The Census Sub-division (CSD) aggregation is a coarse aggregation of all assets within a given CSD as defined by Statistics Canada. 
 
 === Data Dissemination
 
-The data dissemination architecture includes API's and applications that are designed to provide mulitple channels for access to scientific datasets and products.
+The data dissemination architecture includes API's and applications that are designed to provide multiple channels for access to scientific datasets and products.
 
 ==== GitHub
 
-OpenDRR data products are made available in Geopackage footnote:[https://www.ogc.org/standards/geopackage] (GPKG) format in their respective repositories on GitHub. Datasets can be found in release assets for each release of the product and so they are versioned to ensure that consumers  are using the most up to date data. 
+OpenDRR data products are made available in Geopackage footnote:[https://www.ogc.org/standards/geopackage] (GPKG) format in their respective repositories on GitHub. Datasets can be found in release assets for each release of the product and so they are versioned to ensure that consumers are using the most up-to-date data. 
 
-Checksums are also provided for each file in a dataset, so that consumers can verify the itegrity of the data, an important consideration for any data being used to support decision making.
+Checksums are also provided for each file in a dataset so that consumers can verify the integrity of the data, an important consideration for any data being used to support decision making.
 
 ==== API Stack
 
@@ -53,7 +53,7 @@ https://geo-api.riskprofiler.ca
 
 Complying with Open Geospatial Consortium (OGC) footnote:[https://ogcapi.ogc.org/features/] standards, it provides a geospatial data endpoint for GIS application developers. It is implemented using pygeoapi footnote:[https://pygeoapi.io] deployed in a Docker container. Pygeoapi is connected to an Elasticsearch document store.
 
-A developer portal is provided that can be used to formulate and test queries against the API. At time writing the API supports basic querying due to the evolving nature of OGC API - Features Part 3: Filtering and the Common Query Language (CQL).
+A developer portal is provided that can be used to formulate and test queries against the API. At the time writing the API supports basic querying due to the evolving nature of OGC API - Features Part 3: Filtering and the Common Query Language (CQL).
 
 NOTE: pygoapi also provides an OGC API - Records footnote:[https://ogcapi.ogc.org/records/] endpoint that is being explored for future use as a metadata API.
 
@@ -67,4 +67,22 @@ The Elasticsearch API provides data to the Kibana dashboard application footnote
 
 ===== Esri
 
-The Federal Geospatial Platform (FGP) is a Government of Canada clearing house for geospatial data. The FGP provides enterprise grade geospatial infrastructure and support services to facilitate the dissemination of data. OpenDRR datasets are hosted on the FGP and made available via Esri REST services for organisations that utilize Esri based tools and applications.
+The Federal Geospatial Platform (FGP) is a Government of Canada clearinghouse for geospatial data. The FGP provides enterprise-grade geospatial infrastructure and support services to facilitate the dissemination of data. OpenDRR datasets are hosted on the FGP and made available via Esri REST services for organizations that utilize Esri based tools and applications.
+
+==== RiskProfiler
+
+* wordpress static site
+* utilizes API's
+* user profiles: emergency planner, risk manager
+* browse by region of interest
+* Deterministic and probabilistic models
+* downloads
+* training
+
+==== Kibana Dashboard
+
+The Kibana footnote:[https://www.elastic.co/kibana/] Dashboard is intended to support a more sophisticated use case than that of RiskProfiler. Initially, it was imagined that RiskProfiler would serve all stakeholders however, after engaging with the risk community footnote:[URBC 2020], it was evident that a dashboarding application would be well received. 
+
+The Dashboard allows users to create workspaces where they can collaborate with others on data visualizations and reports. The entirety of available data in OpenDRR is available to Dashboard users. These data are hosted in Elasticsearch and it is therefore identical with what is available via the Elasticsearch API. Users can add or link additional datasets to "mash-up" Pathways data with their own.
+
+Users can create reports, data visualizations, and maps for an area of interest. Visualizations can be exported and embedded in presentations and websites. This is the first of such platform to be made available to the Public with national scale risk data.
