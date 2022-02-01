@@ -477,9 +477,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_future_development">6. Future Development</a>
 <ul class="sectlevel2">
 <li><a href="#_additional_natural_hazard_types">6.1. Additional natural hazard types</a></li>
-<li><a href="#_continued_automation_optimization_etc_could_be_duplicative_with_5_2_joost">6.2. Continued automation, optimization, etc. [could be duplicative with 5.2 - Joost]</a></li>
-<li><a href="#_promote_the_project_consider_removing_joost">6.3. Promote the project [consider removing - Joost]</a></li>
-<li><a href="#_engagement">6.4. Engagement</a></li>
+<li><a href="#_engagement">6.2. Engagement</a></li>
 </ul>
 </li>
 </ul>
@@ -827,26 +825,13 @@ pygoapi also provides an OGC API - Records <sup class="footnote">[<a id="_footno
 <div class="sect2">
 <h3 id="_continuous_integration"><a class="anchor" href="#_continuous_integration"></a>5.2. Continuous Integration</h3>
 <div class="paragraph">
-<p>Usage of CI (e.g. GitHub Actions) to generate release assets, do QA, and run data processing scripts.</p>
+<p>It was readily apparent early in the development process that automation would be beneficial. In software development continuous integration is a technology that integrates sub-systems into larger systems on some pre-determined event (e.g. tests have completed successfully for an update such as a bug fix). In the case of OpenDRR continous integration is used for software integration and data integration.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>generate release assets</p>
-</li>
-<li>
-<p>translate README files</p>
-</li>
-<li>
-<p>generate and add add release assets</p>
-</li>
-<li>
-<p>run tests</p>
-</li>
-<li>
-<p>generate metadata</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>When new datasets are added and/or models are updated automated, tasks are run to deploy new services, downloadable assets, and metadata. This saves a significant amount of effort and reduces the amount of time it takes to make these assets available to the community.</p>
+</div>
+<div class="paragraph">
+<p>In the case of OpenDRR software code, continuous integration scripts are used to prepare and publish containerized solutions, generate database scripts, generate configuration files, and run tests. Deploying systems into the cloud via continuous integration is in active development and this is expected to further reduce the level of effort to deploy the software stack.</p>
 </div>
 </div>
 <div class="sect2">
@@ -917,47 +902,12 @@ pygoapi also provides an OGC API - Records <sup class="footnote">[<a id="_footno
 </div>
 </div>
 <div class="sect2">
-<h3 id="_continued_automation_optimization_etc_could_be_duplicative_with_5_2_joost"><a class="anchor" href="#_continued_automation_optimization_etc_could_be_duplicative_with_5_2_joost"></a>6.2. Continued automation, optimization, etc. [could be duplicative with 5.2 - Joost]</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Increased use of GitHub Actions workflows</p>
-</li>
-<li>
-<p>Full CI (Continuous Integration, Continuous Delivery)</p>
-</li>
-<li>
-<p>Cost-savings (e.g. move off Git LFS wherever possible; cheaper alternatives&#8230;&#8203;)</p>
-</li>
-<li>
-<p>More automated testing, to catch errors as early as possible (preferably at the pull request stage)</p>
-</li>
-<li>
-<p>Test-driven development (TDD) / Behaviour driven development (BDD)?</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_promote_the_project_consider_removing_joost"><a class="anchor" href="#_promote_the_project_consider_removing_joost"></a>6.3. Promote the project [consider removing - Joost]</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>as a model with example that that other groups (countries/governments/companies etc.) can use</p>
-</li>
-<li>
-<p>(as open-source project) invite participation from open-source, scientific community, and the general public</p>
-</li>
-<li>
-<p>through web site(s), seminars/talks, publications</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_engagement"><a class="anchor" href="#_engagement"></a>6.4. Engagement</h3>
+<h3 id="_engagement"><a class="anchor" href="#_engagement"></a>6.2. Engagement</h3>
 <div class="paragraph">
 <p>To engage the public more effectively and efficiently respond to queries about the science, the project will leverage the Discussions module in GitHub. The Discussions module can support FAQ&#8217;s, general discussions, collection of feedback, or any other type of engagement. Typically, the primary researcher would have to respond to queries on an ad hoc basis, a time-consuming but necessary task. The Discussions module could reduce the level of effort to support science hosted in repositories.</p>
+</div>
+<div class="paragraph">
+<p>Other opportunities to engage with the user community will be explored as time/resources permit.</p>
 </div>
 </div>
 </div>
