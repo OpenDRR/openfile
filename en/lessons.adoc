@@ -10,13 +10,12 @@ While not ideal, the platform did demonstrate that peer-review of science using 
 
 === Continuous Integration
 
-Usage of CI (e.g. GitHub Actions) to generate release assets, do QA, and run data processing scripts.
+It was readily apparent early in the development process that automation would be beneficial. In software development continuous integration is a technology that integrates sub-systems into larger systems on some pre-determined event (e.g. tests have completed successfully for an update such as a bug fix). In the case of OpenDRR continous integration is used for software integration and data integration. 
 
-* generate release assets
-* translate README files
-* generate and add add release assets
-* run tests
-* generate metadata
+When new datasets are added and/or models are updated automated, tasks are run to deploy new services, downloadable assets, and metadata. This saves a significant amount of effort and reduces the amount of time it takes to make these assets available to the community.
+
+In the case of OpenDRR software code, continuous integration scripts are used to prepare and publish containerized solutions, generate database scripts, generate configuration files, and run tests. Deploying systems into the cloud via continuous integration is in active development and this is expected to further reduce the level of effort to deploy the software stack.
+
 
 === Security
 
